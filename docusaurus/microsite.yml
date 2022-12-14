@@ -1,0 +1,13 @@
+# Please do not remove this file as it is required to populate the `catalog.docs.shopify.io` page
+
+# Modify 'title'
+title: Spatial Commerce Projects
+
+# Modify 'description'
+description: >
+  This is a microsite for the Spatial Commerce team to share sometimes-interactive summaries of each sprint.
+
+repository:
+  home: https://github.com/Shopify/spatial-commerce-projects
+  branch: main
+  blob_url: "%home%/blob/%branch%/%path%"
