@@ -28,7 +28,7 @@ The key is that all these things, the gaze, the hand position, and the user's po
 
 The easy part is the hand and eye tracking, and even the user's position in space: this is all provided by the headset and is aligned together. The hard part is aligning all of this with the real world, such that the walls and floors and products really match up. To accomplish this we created a configuration mode where you load a pre-scanned 3D model of the environment, and drag it into alignment with the real environment using the controller and passthrough cameras.
 
-![Alignment Adjustment Video](/img/placeholder.png)
+![Alignment Adjustment Video](/img/retail-research-kit/TrimmedAdjust.mp4)
 
 ### In-store trial (and error)
 
@@ -36,7 +36,7 @@ With all of this working, we were ready to give this idea a trial run! We offere
 
 Then, since we really needed that scan to work before the rest could be aligned, of course the store failed to scan. We cycled through different phones, Android and iPhone, and it just turned out that scanning the whole store was too much for the software that we had based our workflow around.
 
-![Scan Fail Video](/img/placeholder.png)
+![Scan Fail](/img/retail-research-kit/rs.png)
 
 We discovered that by focusing on a smaller part of the store, we could get a scan that would complete, and we were able to use that scan for the remainder of the research. We found, after one participant had left, that for the majority the time their eyes were not tracked. So it's important to acknowledge the reality of the current state of the art, while understanding that this is brand new technology that just launched.
 
@@ -46,7 +46,7 @@ With the room scan and the aligned motion capture data at our disposal, now we c
 
 This approach worked great, because it decoupled the process of analysis from the process of capture. We could use the results that were taken yesterday to gain further insights today. And when we had a new idea about how to better visualize the data, we could go back and use existing data to validate and check our insights.
 
-![Heatmap Generation Video](/img/placeholder.png)
+![Heatmap Generation Video](/img/retail-research-kit/cyclops_sim.mp4)
 
 ## Takeaways
 
