@@ -6,15 +6,19 @@ slug: /projects/retail-research-kit
 
 # Retail Research Kit
 
-During the course of our last project, the [Meta Quest Pro](https://www.meta.com/quest/quest-pro/) launched, which brought with it a new mix of capabilities that hasn't been brought together before: a portable VR headset, with hand and eye tracking, and color passthrough for mixed reality development. We wondered: what new use cases would this headset unlock for merchants?
-
-<iframe width="960" height="960" src="/heatmap-visualization/" />
-
-## Solution focused on small businesses
-
-We realized that merchants who want to run user research studies in their stores right now have many professional options, but these studies can be expensive and time-consuming, and frankly they seem like a daunting undertaking. This is one of those areas where larger businesses are able to afford the time and money costs of these studies and optimize, putting small businesses under even more pressure to compete. We thought - hey, it might be possible to put together a retail research kit that merchants could rent for cheap (or free.) Could we use this new tech to give small businesses the tools they need to compete?
+During the course of our last project, the [Meta Quest Pro](https://www.meta.com/quest/quest-pro/) launched, which brought with it a new mix of capabilities that hasn't been brought together before: a portable VR headset, with hand and eye tracking, and color passthrough for mixed reality development. We wondered: what new use cases could this headset unlock for merchants?
 
 ![Meta Quest Pro](/img/retail-research-kit/quest-pro.jpeg)
+
+Thinking about hand and eye tracking in particular, we thought - hey, those are the fundamental tools required to run user research studies in retail stores.
+
+User research studies analyze the behavior of customers as they walk through a store to determine which parts of the store receive the most attention, and which parts are ignored. They use eye tracking and other sources of data to help retailers optimize their physical spaces to better serve customers. You can think of them as [Hotjar](https://www.hotjar.com/) but in real life.
+
+If a small merchant wants to run user research studies in the store right now, they have many professional options available, but these studies can be expensive and time-consuming, and frankly they seem like a daunting undertaking. This is one of those areas where larger businesses are able to afford the time and money costs of these studies to optimize, putting small businesses under even more pressure to compete. So then we thought - what if we could send a few Quest Pro’s to a small merchant, and have them collect data in their store with a group of volunteers. Could we use that data to provide the merchant with valuable insights? Could we help small merchants compete?
+
+That’s how we ended up exploring this idea of creating an affordable “retail research kit” with the Quest Pro.
+
+<iframe width="960" height="960" src="/heatmap-visualization/" />
 
 ### Software preparation
 
