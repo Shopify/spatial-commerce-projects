@@ -1,1 +1,0 @@
-server: cd docusaurus && yarn run start --no-open --port $PORT --host 0.0.0.0 --hot-only
