@@ -43,19 +43,19 @@ We explored two problems: how do we align the model produced by RoomPlan with yo
 
 RoomPlan outputs a USDZ model. If you change the file extension to .zip and unzip you find that the USDZ is composed of individual unit cubes; one for each door, window, wall plane and “room-defining” object. These are the room-defining objects RoomPlan can currently detect.
 
-[Room_Scan.mp4]
+{% include youtube.html id='0AeC2bmyP9A?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 ARWorldMap gave us everything we needed to align the model with the real room in an AR session.
 
-[Alignment.mp4]
+{% include youtube.html id='8trNyr232qg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 One thing surprised us: the model RoomPlan produces doesn’t include elements for the floor or ceiling, so we had to write a function to generate that geometry.
 
-[Floor_And_Ceiling.mp4]
+{% include youtube.html id='lx4M9DCWSzs?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We also wrote functions to generate geometry for the baseboards and the door and window trims. Small details like those really helped sell the illusion.
 
-[Baseboards_And_Trim.mp4]
+{% include youtube.html id='HEY0gAlR0sY?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 ### Texturing the Model
 
@@ -63,11 +63,11 @@ When we discovered that RoomPlan exports the USDZ models without textures, the f
 
 To achieve auto-texturing, we reverse the graphics rendering pipeline - instead of sampling from a texture and writing to the screen, we can sample from the camera feed and write into a texture. This was difficult to achieve in RealityKit, but we created an alternate version using SceneKit and modified the shaders to match. The result is a rapidly-populated texture map that can be applied to the world’s geometry and works quite well for unoccluded distance surfaces.
 
-[Projection.mp4]
+{% include youtube.html id='P3jWH_7Q7b4?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 However, as you can see from the video above, we run into problems when objects in the room block the camera from seeing a surface, like the couch obscuring the bottom part of the wall. Thankfully, RoomPlan provides bounding box references for all the major room-defining objects, so we can determine what parts of the texture are obscured:
 
-[Painting.mp4]
+{% include youtube.html id='QaX-h3Qkr68?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 By knowing exactly which pixels are obscured from view, we can now use machine learning inpainting techniques to fill the missing parts of the texture:
 
@@ -81,8 +81,8 @@ Given the size of the gaps that needed filling in, we were pleasantly surprised 
 
 With our model textured we wrote a shader that reveals it in a fun way and that adds AO shadows between walls to help improve the realism.
 
-[Shader_Work.mp4]
+{% include youtube.html id='lK5tgm5hQOU?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Here’s our Space Eraser prototype in action. We adopted Apple’s “glowing line” UI to kickstart our transition and then we fade in our textures. In just a matter of seconds we’re ready to visualize an entirely new setup for these rooms.
 
-[Twitter_Thread_Supercut.mp4]
+{% include youtube.html id='vLcHFi3RjdE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
