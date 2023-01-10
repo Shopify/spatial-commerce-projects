@@ -31,7 +31,10 @@ Although we created the video in Blender to stay atop the blistering pace of inn
 
 The other caveat is the idea that an AI genie could deliver exactly what you have in mind on the first try. In reality, we ran hundreds of requests through Stable Diffusion, endlessly tweaking variables and inputs to generate thousands of potential image steps we could then cherry pick from to get exactly what we wanted.
 
-[IMAGE WITH TONS OF CORN VARIATIONS]
+{:.text-align-center}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/kernel.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/cobs.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/cobs_n_roses.png){:style="width:32%;"}
 
 One big prototyping unlock we discovered recently was an iOS app called [CamtrackAR](https://fxhome.com/product/camtrackar) which records the device accelerometer and tracks spatial anchor data alongside recording video, so the files it exports can easily be brought into Blender as fully fledged video “tracking” shots, which eliminates the often tedious process of visually tracking video from just RGB image data.
 
@@ -69,9 +72,14 @@ The general flow was the same: we made a core 2D video with the generated imager
 
 Honestly, the biggest learning with this shirt project was that it takes so much time to do “instant” generation with AI tools. We spent days and thousands of images, concepts, ideas, directions, attempts, img2img re-draws and so on to finally get towards the final assets.
 
-[EDIT THIS SCREENSHOT TO TAKE OUT THE TEXT FILE NAMES]
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/racoon_attempts.png){:.centered}
 
 There’s a sort of decision paralysis with the infinite canvas: because the art direction is done on the fly you’re constantly asking the AI for things and revising both the specific output (is this a good racoon holding pizza? is the hawaiian shirt right? is the pose right? etc.) and also finding yourself on these more macro paths: maybe the racoon looks like a penguin and suddenly you’re re-writing the whole concept to be penguin themed.
+
+{:.text-align-center}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/racoon_floating_in_space.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/racoon_with_explosion.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/racoon_with_pizza.png){:style="width:32%;"}
 
 We were making zen gardens that looked like snakes, tie dye teddy bears, zebra prints that had faces in the stripes, swimmers in blue waves, mossy lichen on rocks, and so on.
 
