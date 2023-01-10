@@ -5,13 +5,13 @@ title: What if you could bring your home shopping?
 
 [Brennan_Concept_Art.mp4]
 
-We typically use AR to visualize products in our home to see how they look, but AR can’t give us a sense for how products feel. Aesthetics matter when shopping for a couch, but it’s just as important to sit down and feel if the couch is comfortable or not. Today, only a visit to the store can deliver that tactile experience.
+We typically use AR to visualize products in our home to see how they _look_, but AR can’t give us a sense for how products _feel_. Aesthetics matter when shopping for a couch, but it’s just as important to sit down and feel if the couch is comfortable or not. Today, only a visit to the store can deliver that tactile experience.
 
-Recently, photogrammetry apps like Polycam and Reality Capture have made it easy for anyone to create a high fidelity model of their room using their iPhone. We previously explored using Apple’s new RoomPlan API to create high fidelity room models as well. NeRFs are an exciting breakthrough in 3D capture and rendering that are taking 3D capture to new levels of fidelity.
+Recently, photogrammetry apps like [Polycam](https://poly.cam/) and [Reality Capture](https://www.capturingreality.com/realitycapture) have made it easy for anyone to create a high fidelity model of their room using their iPhone. We [previously]({% post_url 2022-6-1-Space-Eraser %}) explored using Apple’s new RoomPlan API to create high fidelity room models as well. NeRFs are an exciting breakthrough in 3D capture and rendering that are taking 3D capture to new levels of fidelity.
 
 [Polycam.mp4]
 
-We wondered if we could use these technologies to deliver the best of both worlds: look and feel. We explored what it would be like to reverse the role AR typically plays: instead of rendering a virtual thing in a real room we’d render a virtual room around a real thing.
+We wondered if we could use these technologies to deliver the best of both worlds: _look_ and _feel_. We explored what it would be like to reverse the role AR typically plays: instead of rendering a _virtual thing_ in a _real room_ we’d render a _virtual room_ around a _real thing_.
 
 > “We’ve turned traditional augmented reality on its head.”
 
@@ -23,14 +23,17 @@ Reversing AR makes it easy for shoppers to touch a product directly and see it i
 
 In a store, shoppers use their phone or AR glasses to project their 3D room model into the environment. Computer vision systems segment furniture and people from their camera feed and composite them into the virtual room.
 
-“Now shoppers can sit on the real thing and see if it fits their space at the same time.”
+> “Now shoppers can sit on the real thing and see if it fits their space at the same time.”
+
 Multiplayer capabilities allow two shoppers to view the same scene simultaneously, making it easier to discuss ideas. Gestures can be used to control the orientation of the room, creating some mind-bending moments.
 
 Merchants could offer shoppers multiple scenes to showcase the versatility of a piece—in a Paris flat, a modern mountain cabin, or next to an infinity pool nestled in a desert oasis.
-Exploration
+
+## Exploration
+
 In exploring this concept we had to solve two problems. We had to leverage existing APIs to classify and segment a piece of furniture from a scene in real time and we needed to render the live segmented video and virtual room together with a high degree of realism.
 
-We began by exploring classification and segmentation using YOLOv3 and DeepLabV3, but the quality of the segmentation didn’t pass the bar for our needs.
+We began by exploring classification and segmentation using [YOLOv3 and DeepLabV3](https://developer.apple.com/machine-learning/models/), but the quality of the segmentation didn’t pass the bar for our needs.
 
 [Segmentation.mp4]
 

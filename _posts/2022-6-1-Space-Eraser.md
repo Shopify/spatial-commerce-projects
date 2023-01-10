@@ -7,7 +7,7 @@ title: What if your room had a reset button?
 
 Augmented reality is useful when you're shopping for furniture, but all the stuff that’s already in your room kinda gets in the way of a good AR preview. Diminished reality techniques use AI to blend selected areas of an image with surrounding pixels—effectively cloaking individual objects—but there is still no easy way to reset your room.
 
-Apple recently announced a new API called RoomPlan at WWDC. RoomPlan makes it easy to create a semantically labeled model of your room and “room-defining objects” using computer vision and LiDAR data.
+Apple recently announced a new API called [RoomPlan](https://developer.apple.com/augmented-reality/roomplan/) at WWDC. RoomPlan makes it easy to create a semantically labeled model of your room and “room-defining objects” using computer vision and LiDAR data.
 
 We were excited to dig into this new API and wondered if we could leverage it to create a reset button for your room. What shopping experiences might we unlock If we made it easier to clear out your space?
 
@@ -41,11 +41,11 @@ We explored two problems: how do we align the model produced by RoomPlan with yo
 
 ### Aligning the Model
 
-RoomPlan outputs a USDZ model. If you change the file extension to .zip and unzip you find that the USDZ is composed of individual unit cubes; one for each door, window, wall plane and “room-defining” object. These are the room-defining objects RoomPlan can currently detect.
+RoomPlan outputs a USDZ model. If you change the file extension to .zip and unzip you find that the USDZ is composed of individual unit cubes; one for each door, window, wall plane and “room-defining” object. These are the [room-defining objects](https://developer.apple.com/documentation/roomplan/capturedroom/object/category-swift.enum/) RoomPlan can currently detect.
 
 {% include youtube.html id='0AeC2bmyP9A?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-ARWorldMap gave us everything we needed to align the model with the real room in an AR session.
+`ARWorldMap` gave us everything we needed to align the model with the real room in an AR session.
 
 {% include youtube.html id='8trNyr232qg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
@@ -75,7 +75,7 @@ By knowing exactly which pixels are obscured from view, we can now use machine l
 ![_config.yml]({{ site.baseurl }}/images/space_eraser/floor_with_gaps.png){:style="width:49%;"}
 ![_config.yml]({{ site.baseurl }}/images/space_eraser/floor_infilled.png){:style="width:49%;"}
 
-Given the size of the gaps that needed filling in, we were pleasantly surprised by the quality of results using off-the-shelf infill tools like Photoshop or https://theinpaint.com.
+Given the size of the gaps that needed filling in, we were pleasantly surprised by the quality of results using off-the-shelf infill tools like Photoshop or [Inpaint](https://theinpaint.com).
 
 ### Shader Work
 
