@@ -4,12 +4,19 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+![_config.yml]({{ site.baseurl }}/images/about/spatial_commerce_logo.png){:.centered}
 
-### More Information
+This is the blog of Shopify's Spatial Commerce Team.
 
-A place to include any other types of information that you'd like to include about yourself.
+We are a rapid prototyping crew of engineers, designers and artists focused on exploring the latest technologies in these fields:
 
-### Contact me
+- Spatial computing
+- Augmented reality
+- Virtual reality
+- Artificial intelligence
 
-[email@domain.com](mailto:email@domain.com)
+We are particularly interested in how those technologies intersect with the world of commerce, and how they might reshape it in the future.
+
+We build in the open and regularly share our work here and on [twitter](https://twitter.com/StrangeNative), so consider following us if this is of any interest to you, and reach out if you have any questions or comments. We are always happy to talk!
+
+![_config.yml]({{ site.baseurl }}/images/about/hello.gif){:.centered}
