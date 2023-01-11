@@ -3,11 +3,15 @@ layout: post
 title: Could AR revolutionize retail store design?
 ---
 
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/concept_art.png){:.centered}
+
 During the course of our last project, the [Meta Quest Pro](https://www.meta.com/ca/quest/quest-pro/) launched, which brought with it a new mix of capabilities that hasn't been brought together before: a portable VR headset, with hand and eye tracking, and color passthrough for mixed reality development. We wondered: what new use cases could this headset unlock for merchants?
 
 Looking at hand and eye tracking in particular, we thought - hey, those are the fundamental tools required to run user research studies in retail stores.
 
 User research studies analyze the behavior of customers as they walk through a store to determine which parts of the store receive the most attention, and which parts are ignored. They use eye tracking and other sources of data to help retailers optimize their physical spaces to better serve customers. You can think of them as [Hotjar](https://www.hotjar.com/) but in real life.
+
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/hotjar.jpg){:.centered}
 
 If a small merchant wants to run user research studies in their store right now, they have many professional options available, but these studies can be expensive and time-consuming, and frankly they seem like a daunting undertaking.
 
@@ -41,6 +45,8 @@ To visualize the data we wrote scripts to read the saved transforms and play the
 
 If you watch the previous video carefully, you will notice that the hands occasionally look quite funny, like they do in the image below.
 
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/broken_hands.png){:.centered}
+
 Later on we figured out how to combine the transforms of the joints correctly, and the hands started looking flawless.
 
 ### Aligning the motion capture data with the store
@@ -63,23 +69,25 @@ With the 3D model of the store and the aligned motion capture data at our dispos
 
 At this stage of the project we explored many different ways of visualizing customer walkthroughs. Some of our more unusual ideas include:
 
-Marking what the customer is currently looking at with concentric circles, and marking their path through the store with a trail of bubbles.
+- Marking what the customer is currently looking at with concentric circles, and marking their path through the store with a trail of bubbles.
 
 [concentric_circles_and_bubbles.mp4]
 
-Marking the things that the customer looks at with spheres.
+- Marking the things that the customer looks at with spheres.
 
 [sphere_markers.mp4]
 
-Starting with a white store, and marking the things that the customer looks at by revealing their colors.
+- Starting with a white store, and marking the things that the customer looks at by revealing their colors.
 
 [Reveal_Colors.mp4]
 
-Marking the customer’s path through the store with flattened leaves of grass.
+- Marking the customer’s path through the store with flattened leaves of grass.
 
 [grass.mp4]
 
-Marking the customer’s path through the store with spheres whose size and color depend on the time spent at each location.
+- Marking the customer’s path through the store with spheres whose size and color depend on the time spent at each location.
+
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/inchworm.png){:.centered}
 
 In the end, however, we decided to focus on creating classic heatmaps, since they are easy to read and can pack a lot of detail.
 
@@ -87,9 +95,11 @@ We started by implementing a technique called [Mesh Texture Painting](https://sh
 
 [Retail_Research_Kit_Train_Mesh_Painting.mp4]
 
-That technique saves whatever you draw in a texture. In the case of the train above, for example, this is what its texture looks like before being painted:
+That technique saves whatever you draw in a texture. In the case of the train above, for example, this is what its texture looks like before and after being painted:
 
-And this is what it looks like after being painted:
+{:.text-align-center}
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/train_texture.png){:style="width:49%;"}
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/painted_train_texture.png){:style="width:49%;"}
 
 This was perfect for us since we could generate textures for different customer walkthroughs and then compare them and combine them however we wanted.
 
@@ -105,6 +115,8 @@ And then the last step was porting the shader so that it would work in VR. We st
 
 Here’s what the texture of one of our office’s looked like after being painted with the gaze vector:
 
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/painted_office_texture.png){:.centered}
+
 The last thing we did was implement a mode in the app that allowed merchants to overlay painted textures on top of their real stores in color passthrough. We thought this was a very engaging way of visualizing the data. Merchants could walk through their stores and approach hot spots to understand what products were drawing the most attention.
 
 [Retail_Research_Kit_Heatmap_Overlay.mp4]
@@ -116,6 +128,8 @@ Decoupling the process of analysis from the process of capture worked great for 
 With all of this working, we were ready to give this idea a trial run. We offered some compensation for volunteer's time, called local Shopify stores in our area, and we found that a local store called [Paxton Gate](https://paxtongate.com/) was as eager as we were to find out more. We'd have to scan the store into a 3D model first, then load that into our app so that we could do the alignment and begin recording.
 
 Unfortunately our initial scans of the store failed. We tried different iOS and Android phones, but we kept getting the same errors. Paxton Gate was simply too large and too complex for Polycam.
+
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/polycam_error.jpg){:.centered}
 
 We then decided to only scan three quarters of the store, which allowed us to get a 3D model that we could use in our app.
 
@@ -149,6 +163,6 @@ One can even imagine a future where merchants not only have 3D scans of their st
 
 That would unlock new insights like “what parts of this product draw the most attention?”.
 
-[soap_dispense.gif]
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/soap_dispenser.gif){:.centered}
 
 For a merchant who's never had easy access to this type of technology, this is now a huge opportunity.
