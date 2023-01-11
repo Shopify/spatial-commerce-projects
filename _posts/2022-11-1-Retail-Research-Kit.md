@@ -57,7 +57,7 @@ Now we needed to figure out how to capture the position and orientation of the s
 
 To accomplish this we added an initial step to our app: we would load a pre-scanned 3D model of the store, and we would drag it into alignment with the real store using one of the Quest Pro’s controllers.
 
-[Alignment.mp4]
+{% include youtube.html id='gDK9Po6ReVg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 During the alignment step we made the model transparent so that it could be easily lined up with the world, and once this step was completed, we made it invisible so that it wouldn’t affect the shopping experience.
 
@@ -71,7 +71,7 @@ At this stage of the project we explored many different ways of visualizing cust
 
 - Marking what the customer is currently looking at with concentric circles, and marking their path through the store with a trail of bubbles.
 
-[concentric_circles_and_bubbles.mp4]
+{% include youtube.html id='jBOoV-Xa2s8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - Marking the things that the customer looks at with spheres.
 
@@ -83,7 +83,7 @@ At this stage of the project we explored many different ways of visualizing cust
 
 - Marking the customer’s path through the store with flattened leaves of grass.
 
-[grass.mp4]
+{% include youtube.html id='lOFN1m7v8tA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - Marking the customer’s path through the store with spheres whose size and color depend on the time spent at each location.
 
@@ -107,11 +107,11 @@ If you would like to play with the train mesh texture painting demo, it’s live
 
 Once we had the mesh texture painting shader working, we modified it to draw different colormaps like [Turbo](https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html). Now the colors you painted would change depending on how long you held the mouse at the same place, and they would attenuate nicely too.
 
-[Retail_Research_Kit_Mesh_Painting_Turbo_With_Mouse.mp4]
+{% include youtube.html id='SpKPG38Akb0?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 And then the last step was porting the shader so that it would work in VR. We started by replacing the mouse with a Quest Pro controller, and then we replaced the Quest Pro controller with the gaze vector. It’s an amazing feeling to paint with your eyes. You feel like Marvel’s Cyclops while doing it.
 
-[Retail_Research_Kit_Mesh_Painting_Turbo_With_Controller_And_Eyes.mp4]
+{% include youtube.html id='Rt7DRhWjbIQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Here’s what the texture of one of our office’s looked like after being painted with the gaze vector:
 
@@ -119,7 +119,7 @@ Here’s what the texture of one of our office’s looked like after being paint
 
 The last thing we did was implement a mode in the app that allowed merchants to overlay painted textures on top of their real stores in color passthrough. We thought this was a very engaging way of visualizing the data. Merchants could walk through their stores and approach hot spots to understand what products were drawing the most attention.
 
-[Retail_Research_Kit_Heatmap_Overlay.mp4]
+{% include youtube.html id='Qp5HEbcietg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Decoupling the process of analysis from the process of capture worked great for this project. We could use the results that were taken yesterday to gain further insights today. And when we had a new idea about how to better visualize the data, we could go back and use existing data to validate and check our insights.
 
@@ -139,17 +139,17 @@ Even with all those problems, we were able to successfully capture a few volunte
 
 Here’s an actual volunteer walking through Paxton Gate:
 
-[Retail_Research_Kit_Customer_Walkthrough.mp4]
+{% include youtube.html id='Xd6l-ksdwXM?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Everything you see in that video was mocapped, and the heatmap on the walls is the result of combining the walkthrough data of multiple volunteers.
 
 Here’s another volunteer browsing through some water bottles and cards:
 
-[Retail_Research_Kit_Customer_Browsing.mp4]
+{% include youtube.html id='H_v1O9XFLHQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 And here’s the combined heatmap overlaid on top of the real Paxton Gate in color passthrough:
 
-[Retail_Research_Kit_Heatmap_Overlay_In_Paxton_Gate.mp4]
+{% include youtube.html id='fvl4vsmWDtQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 The different ways one can visualize the data are truly endless.
 
@@ -159,9 +159,9 @@ When everything is working, this is a valuable and magical tool for merchants. I
 
 One can even imagine a future where merchants not only have 3D scans of their stores, but of every single product within them, which would allow this tool to keep track of all the products that a customer interacts with with great precision.
 
-[Retail_Research_Kit_Grabbing_Soap_Dispenser.mp4]
+{% include youtube.html id='czi0RMfSGS8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-That would unlock new insights like “what parts of this product draw the most attention?”.
+That would unlock new insights like “what parts of this product draw the most attention?”
 
 ![_config.yml]({{ site.baseurl }}/images/retail_research_kit/soap_dispenser.gif){:.centered}
 
