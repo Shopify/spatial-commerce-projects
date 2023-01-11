@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Could AI make every shopper’s wish come true?
+subtitle: AI Product Genie
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/ai_product_genie/victorian_hot_dog_wallpaper.png){:.centered}
@@ -13,7 +14,7 @@ Consider one particular use case: shopping for wallpaper is hard when you have s
 
 We wanted to take this idea a step further to see if we could conjure a genie!
 
-## Wallpaper Genie
+# Wallpaper Genie
 
 [AI_Product_Genie_Wallpaper_Demo.m4v]
 
@@ -25,7 +26,7 @@ Buy what you love instantly. It knows just how much you need to cover that wall.
 
 > “Say hello to the AI Product Genie. Your wish is its command-line.”
 
-## How We Made It
+# How we made it
 
 Although we created the video in Blender to stay atop the blistering pace of innovation in this space, we conceived and designed the concept with today’s APIs and device capabilities in mind. This is a project that could entirely work today if you were patient enough to wait for the AI imagery to be generated, which currently takes ~10 seconds on a desktop GPU and longer on mobile devices. But! That time is decreasing every week and month, so we felt honest about representing this as an idea very soon to become practical.
 
@@ -60,13 +61,13 @@ One small fun thing to point out is that Blender actually just has a built in so
 
 And then to round it out, the most basic ever UI mockup for the sales page. 
 
-## Fashion Genie
+# Fashion Genie
 
 With this pipeline already built and proven, it was a quick jump to apply it to other mediums, which is why we decided to explore the same concept again but this time with a t-shirt.
 
 [AI_Product_Genie_Fashion_Demo.m4v]
 
-## How We Made It
+# How we made it
 
 The general flow was the same: we made a core 2D video with the generated imagery and transitions, and we filmed a blank-shirt selfie with the script and general timing in mind. Fine tuning one to the other and using Snapchat’s inbuilt clothing tracking process we could easily apply the video as a texture that automatically camera + body tracked everything and masked the hand for us. Using these existing processes is a huge help because anyone who has manually rotoscoped these kinds of shots before knows how laborious it can be.
 

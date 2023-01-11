@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Could AR glasses revolutionize media creation?
+subtitle: Spatial Admin
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/spatial_admin/spatial_admin_concept_art.png){:.centered}
@@ -11,7 +12,7 @@ Virtual photography in particular is a powerful new tool. Using 3D rendering to 
 
 With AR moving from phones to headsets, which are hands-free, a whole new world of content creation in 3D space with natural hand interactions is unlocked, so we decided to explore what it could look like to edit a product image with a spatial user interface.
 
-## Exploration
+# Exploration
 
 We started by studying and playing with the many features of the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/).
 
@@ -63,7 +64,7 @@ There might still be something to this idea, where moving into the picture frame
 
 [Spatial_Admin_Zed_Mini_Hands.m4v]
 
-## Final prototype
+# Final prototype
 
 The video below presents our vision of what editing a product image with a spatial user interface could look like in the future:
 
@@ -97,7 +98,7 @@ Finally, the merchant summons a “Go Live” button using a thumbs-up gesture. 
 
 The whole experience is engaging and delightful.
 
-## Editor’s Addendum (December 2022)
+# Editor’s addendum (December 2022)
 
 It’s funny to look back even a few months ago. We went from the black and white passthrough of the Quest 2 to the color passthrough of the Quest Pro, and we have since worked on a few projects with the new headsets.
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What could instruction manuals look like in the future?
+subtitle: Instructional AR
 ---
 
 The year is 2022, and instruction manuals continue to look just like they have for decades: they are little paper booklets with 2D diagrams of 3D objects.
@@ -19,9 +20,9 @@ Those were the questions that we set out to answer.
 
 [AR_Booklet.mp4]
 
-## Exploration
+# Exploration
 
-### Choosing a product
+## Choosing a product
 
 The first step in the exploration phase was choosing the product that we would center our prototype around. The obvious choice was a piece of furniture, since most people are familiar with the experience (and struggles) of assembling furniture at home.
 
@@ -35,7 +36,7 @@ The instruction manual of the toy kitchen teaches you how to put it together in 
 
 If our technology couldn’t teach you how to assemble a toy kitchen, then it definitely didn’t have legs for anything else.
 
-### Object tracking
+## Object tracking
 
 Once we had our product selected, we started thinking about how we would guide the user through the assembly process. We needed a way to tell them “grab these pieces and connect them like this”.
 
@@ -47,7 +48,7 @@ Our solution to this problem ended up being beautifully simple. While discussing
 
 It turns out there’s a word for the process of laying things like that. It’s called knolling.
 
-### Guiding the user
+## Guiding the user
 
 With the object tracking problem solved, now came the fun part: how would we guide the user through each step?
 
@@ -77,7 +78,7 @@ We explored many different ideas and interaction patterns during this phase. Her
 
 [Microphone.mp4]
 
-### Delighting the user
+## Delighting the user
 
 After implementing so many fun mechanisms to guide the user, we realized that the assembly process of a product is also a great opportunity for merchants to delight users with fun special effects and animations.
 
@@ -85,7 +86,7 @@ To demonstrate that idea we added some animated toys to the kitchen that are dis
 
 [Ending_Toys.mp4]
 
-## Final prototype
+# Final prototype
 
 The video below presents all the ideas that were discussed in the previous section in their final form within our prototype.
 
@@ -117,7 +118,7 @@ Second, people believe that to produce an AR instruction manual you need to hire
 
 It’s true that you need an artist to add a delightful ending to an AR instruction manual, but producing a more pragmatic instruction manual could be almost fully automated by software.
 
-## Conclusions
+# Conclusions
 
 This investigation focused primarily on how AR instruction manuals could improve the experience of assembling furniture at home. We chose that angle because we felt that a lot of people could relate to the struggle of assembling furniture with a confusing set of instructions, but what we find exciting about this technology and the interaction paradigms that we developed is that they can be used to teach people a variety of skills, not just how to assemble furniture.
 

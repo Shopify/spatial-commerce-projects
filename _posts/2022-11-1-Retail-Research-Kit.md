@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Could AR revolutionize retail store design?
+subtitle: Retail Research Kit
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/retail_research_kit/concept_art.png){:.centered}
@@ -19,7 +20,7 @@ This is one of those areas where larger businesses are able to afford the time a
 
 That’s how we ended up exploring the idea of creating an affordable “retail research kit” with the Quest Pro.
 
-## Exploration
+# Exploration
 
 We started this project with the broad goal of figuring out how to paint 3D attention heatmaps based on:
 
@@ -29,7 +30,7 @@ We started this project with the broad goal of figuring out how to paint 3D atte
 
 In a sense, we needed a way to turn customers into motion capture performers.
 
-### Body, gaze and hand tracking
+## Body, gaze and hand tracking
 
 The first thing we did was write an application that shows the world in color passthrough while it records motion capture data.
 
@@ -49,7 +50,7 @@ If you watch the previous video carefully, you will notice that the hands occasi
 
 Later on we figured out how to combine the transforms of the joints correctly, and the hands started looking flawless.
 
-### Aligning the motion capture data with the store
+## Aligning the motion capture data with the store
 
 We now had a way to capture all the data we needed: the position of the customer, their gaze, and the position of their hands.
 
@@ -63,7 +64,7 @@ During the alignment step we made the model transparent so that it could be easi
 
 Relying on [Polycam](https://poly.cam/) for the creation of the store’s scan and on the user for the alignment of the virtual and real worlds reduced the complexity of our software enormously.
 
-### Visualizing the data
+## Visualizing the data
 
 With the 3D model of the store and the aligned motion capture data at our disposal, we could now use this data to drive replays, and those replays could produce visualizations like heatmaps.
 
@@ -123,7 +124,7 @@ The last thing we did was implement a mode in the app that allowed merchants to 
 
 Decoupling the process of analysis from the process of capture worked great for this project. We could use the results that were taken yesterday to gain further insights today. And when we had a new idea about how to better visualize the data, we could go back and use existing data to validate and check our insights.
 
-## In-store trial (and error)
+# In-store trial (and error)
 
 With all of this working, we were ready to give this idea a trial run. We offered some compensation for volunteer's time, called local Shopify stores in our area, and we found that a local store called [Paxton Gate](https://paxtongate.com/) was as eager as we were to find out more. We'd have to scan the store into a 3D model first, then load that into our app so that we could do the alignment and begin recording.
 
@@ -153,7 +154,7 @@ And here’s the combined heatmap overlaid on top of the real Paxton Gate in col
 
 The different ways one can visualize the data are truly endless.
 
-## Conclusions
+# Conclusions
 
 When everything is working, this is a valuable and magical tool for merchants. It allows small businesses to compete with even the largest corporations in doing user research studies, and it’s all done using technology that's within reach today.
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What if your room had a reset button?
+subtitle: Space Eraser
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_popcorn.gif){:.centered}
@@ -13,7 +14,7 @@ We were excited to dig into this new API and wondered if we could leverage it to
 
 > “The ability to select and remove real objects from a scene brings us closer to a fully-editable reality.”
 
-## Concept
+# Concept
 
 ![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_title.gif){:.centered}
 
@@ -35,11 +36,11 @@ A digital twin of your room also makes it easy to edit specific items. Select yo
 
 In the near term this concept can be delivered through mobile AR, but it will only truly shine once more immersive AR headsets arrive, and it highlights that adding virtual things to a real room is just the first step. The ability to select and remove real objects from a scene brings us closer to a fully-editable reality.
 
-## Prototype
+# Prototype
 
 We explored two problems: how do we align the model produced by RoomPlan with your room and how do we texture the model to match your room? Can we texture it automatically?
 
-### Aligning the Model
+## Aligning the model
 
 RoomPlan outputs a USDZ model. If you change the file extension to .zip and unzip you find that the USDZ is composed of individual unit cubes; one for each door, window, wall plane and “room-defining” object. These are the [room-defining objects](https://developer.apple.com/documentation/roomplan/capturedroom/object/category-swift.enum/) RoomPlan can currently detect.
 
@@ -57,7 +58,7 @@ We also wrote functions to generate geometry for the baseboards and the door and
 
 {% include youtube.html id='HEY0gAlR0sY?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-### Texturing the Model
+## Texturing the model
 
 When we discovered that RoomPlan exports the USDZ models without textures, the first thing we did was brainstorm ways of automatically texturing the model. The optimal method for generating textures would be to simultaneously localize and map the texture when capturing the RoomPlan. However, given an aligned room scan model and a real-time camera feed, we have the next-best thing.
 
@@ -77,7 +78,7 @@ By knowing exactly which pixels are obscured from view, we can now use machine l
 
 Given the size of the gaps that needed filling in, we were pleasantly surprised by the quality of results using off-the-shelf infill tools like Photoshop or [Inpaint](https://theinpaint.com).
 
-### Shader Work
+## Rendering the model
 
 With our model textured we wrote a shader that reveals it in a fun way and that adds AO shadows between walls to help improve the realism.
 

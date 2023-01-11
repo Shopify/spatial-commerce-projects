@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What if you could bring your home shopping?
+subtitle: Reverse AR
 ---
 
 [Brennan_Concept_Art.mp4]
@@ -15,7 +16,7 @@ We wondered if we could use these technologies to deliver the best of both world
 
 > “We’ve turned traditional augmented reality on its head.”
 
-## Concept
+# Concept
 
 [Reverse_AR_Concept.mp4]
 
@@ -29,7 +30,7 @@ Multiplayer capabilities allow two shoppers to view the same scene simultaneousl
 
 Merchants could offer shoppers multiple scenes to showcase the versatility of a piece—in a Paris flat, a modern mountain cabin, or next to an infinity pool nestled in a desert oasis.
 
-## Exploration
+# Exploration
 
 In exploring this concept we had to solve two problems. We had to leverage existing APIs to classify and segment a piece of furniture from a scene in real time and we needed to render the live segmented video and virtual room together with a high degree of realism.
 
@@ -65,7 +66,7 @@ In parallel, we also needed to generate grounding shadows for real objects in th
 
 [Shadows.mp4]
 
-## Final prototype
+# Final prototype
 
 When you bring it all together, it’s a magical experience we can build with today’s technology. This prototype is running live in a real furniture store on an iPad Pro.
 

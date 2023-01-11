@@ -168,6 +168,43 @@ img.centered {
   border: 0;
 }
 
+.title {
+  font-size: 30px;
+  a {
+    color: inherit;
+  }
+  font-family: $helveticaNeue;
+  color: $darkerGray;
+  font-weight: bold;
+
+  line-height: 1.7;
+  margin: 0 0 15px;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
+.subtitle {
+  font-size: 20px;
+  a {
+    color: inherit;
+  }
+  font-family: $helveticaNeue;
+  color: $darkerGray;
+  font-weight: bold;
+  text-decoration: underline;
+
+  line-height: 1.7;
+  margin: 1em 0 0;
+  padding: 0;
+
+  @include mobile {
+    line-height: 1.4;
+  }
+}
+
 /*********************/
 /* LAYOUT / SECTIONS */
 /*********************/
