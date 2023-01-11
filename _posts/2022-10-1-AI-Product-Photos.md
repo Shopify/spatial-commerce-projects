@@ -3,11 +3,11 @@ layout: post
 title: Could AI unlock unlimited product photography?
 ---
 
+![_config.yml]({{ site.baseurl }}/images/ai_product_photos/shoe_overview.png){:.centered}
+
 Our team at Shopify usually focuses on spatial computing: AR, VR, and other forms of immersive media. However, we incorporated generative diffusion into our [AI Product Genie]({% post_url 2022-9-1-AI-Product-Genie %}) exploration, and during the course of that project we had the spark of an idea in the form of a ton of questions, and had developed the expertise to investigate and answer them.
 
 The idea was this: if image diffusion had gotten this good, had it gotten good enough that merchants could use it to spruce up their product photos? If so, what are the limits of that improvement - is it closer to a color balance filter, or a little image retouching, or can it go further? Beyond that, we wondered whether there were certain products, categories, or image properties that would challenge the available diffusion models. These were the questions we asked when embarking on our exploration into AI product photos.
-
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/shoe_overview.png){:.centered}
 
 ## Exploration
 
