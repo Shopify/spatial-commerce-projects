@@ -38,11 +38,11 @@ We decided to make this application fully unobtrusive by not including virtual h
 
 Using the [Oculus Movement SDK](https://developer.oculus.com/documentation/unity/move-overview/) we were able to record the transform of each eye individually, and using the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) we were able to record the 158 transforms that make up the joints of the hands.
 
-[Motion_Capture.mp4]
+{% include youtube.html id='LD0-zcH-XOE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 To visualize the data we wrote scripts to read the saved transforms and play them in the Unity editor, and to convert them into an Alembic file so that they could also be played in Blender.
 
-[Playback.mp4]
+{% include youtube.html id='6w39aIFWjX8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 If you watch the previous video carefully, you will notice that the hands occasionally look quite funny, like they do in the image below.
 
@@ -76,11 +76,11 @@ At this stage of the project we explored many different ways of visualizing cust
 
 - Marking the things that the customer looks at with spheres.
 
-[sphere_markers.mp4]
+{% include youtube.html id='ew5fvuKYF_8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - Starting with a white store, and marking the things that the customer looks at by revealing their colors.
 
-[Reveal_Colors.mp4]
+{% include youtube.html id='1MEAkV7W6xE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - Marking the customer’s path through the store with flattened leaves of grass.
 
@@ -94,7 +94,7 @@ In the end, however, we decided to focus on creating classic heatmaps, since the
 
 We started by implementing a technique called [Mesh Texture Painting](https://shahriyarshahrabi.medium.com/mesh-texture-painting-in-unity-using-shaders-8eb7fc31221c) to paint 3D models using the mouse.
 
-[Retail_Research_Kit_Train_Mesh_Painting.mp4]
+{% include youtube.html id='mOQju9vGnGg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 That technique saves whatever you draw in a texture. In the case of the train above, for example, this is what its texture looks like before and after being painted:
 

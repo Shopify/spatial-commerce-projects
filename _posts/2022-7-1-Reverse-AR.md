@@ -4,7 +4,7 @@ title: What if you could bring your home shopping?
 subtitle: Reverse AR
 ---
 
-[Brennan_Concept_Art.mp4]
+{% include youtube.html id='4FmCO5k8D9I?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We typically use AR to visualize products in our home to see how they _look_, but AR can’t give us a sense for how products _feel_. Aesthetics matter when shopping for a couch, but it’s just as important to sit down and feel if the couch is comfortable or not. Today, only a visit to the store can deliver that tactile experience.
 
@@ -18,7 +18,7 @@ We wondered if we could use these technologies to deliver the best of both world
 
 # Concept
 
-[Reverse_AR_Concept.mp4]
+{% include youtube.html id='JRB8C_cX8DI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Reversing AR makes it easy for shoppers to touch a product directly and see it in their space instantly. Before arriving at the store, shoppers take just a few moments to create a high fidelity model of their room by recording a short video. Still frames from the video are used to build a detailed 3D model of the room in seconds which can be used again and again in any store.
 
@@ -40,7 +40,7 @@ We began by exploring classification and segmentation using [YOLOv3 and DeepLabV
 
 In parallel, we explored RealityKit’s implementation, trying to figure out why Apple’s furniture segmentation worked so well. It looked to us like they were leveraging meshes constructed from LiDAR data.
 
-[Apple_Segmentation.mp4]
+{% include youtube.html id='LHr9AM17yBA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We decided to use Unity and ARFoundation to explore meshing. We built a quick demo that generates a mesh for any object classified as a sofa and applies an occlusion material to it. That way, when a piece of furniture is surrounded by a virtual room, its mesh becomes a window into the real world that reveals the real object.
 
@@ -56,7 +56,7 @@ Along the way, we explored depth-based segmentation on LiDAR equipped devices, w
 
 Then we discovered that we could use depth-based segmentation to more cleanly cut objects out of the scene if we had a bounding box to constrain the depth buffer to world space.
 
-[Advanced_Depth.mp4]
+{% include youtube.html id='9LKbw-MYqzA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Here’s how it works:
 
@@ -74,4 +74,4 @@ When you bring it all together, it’s a magical experience we can build with to
 
 The depth-based segmentation approach constrained by the bounding box produces incredible results, and it isn’t adversely affected by unrecognized objects like cushions and pets. In fact, with this approach, users can bring their pets into beautiful virtual worlds, even if they don’t want to come.
 
-[Russ_Cat.mp4]
+{% include youtube.html id='VqQvwjOHMOo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
