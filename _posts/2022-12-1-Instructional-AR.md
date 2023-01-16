@@ -18,7 +18,7 @@ Would seeing the assembly steps in 3D eliminate the ambiguity usually associated
 
 Those were the questions that we set out to answer.
 
-[AR_Booklet.mp4]
+{% include youtube.html id='hGQofWT2-z8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 # Exploration
 
@@ -44,7 +44,7 @@ The first half of that sentence is what worried us the most. How would we highli
 
 Our solution to this problem ended up being beautifully simple. While discussing how each of us usually assembles furniture, we realized that most of us like to lay out all the pieces on the floor before starting to put them together. So then we thought: what if the AR instruction manual told you how to lay out the pieces? Once you completed that step, the system would know exactly where everything is, so it could tell you where to grab things!
 
-[Knolling.mp4]
+{% include youtube.html id='SMrk0SaoOuk?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 It turns out there’s a word for the process of laying things like that. It’s called knolling.
 
@@ -56,15 +56,15 @@ We explored many different ideas and interaction patterns during this phase. Her
 
 - We thought it would be fun to have an animated helper that keeps track of your hands and alerts you when you grab an incorrect piece. The alert can take the form of a speech bubble, an audio clip or just a nod of the character’s head. It’s surprising how expressive an animation by itself can be.
 
-[Helper_Experiments.mp4]
+{% include youtube.html id='_Zv1IxLZY8M?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We implemented ghost pieces that travel from their knolled positions to their final positions on a reference model of what you are assembling. This ended up being our most commonly used pattern. It’s simple and effective at telling you what to do.
 
-[Ghosts.mp4]
+{% include youtube.html id='V5XeUwdvHMI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We color-coded the screws, bolts and tools to make it easy to recognize which ones to use at each step. We also displayed flowing dashed lines at the places where the screws and bolts needed to be inserted. Seeing those lines in 3D felt so much clearer than seeing them in a 2D diagram.
 
-[Screws_And_Bolts.mp4]
+{% include youtube.html id='C0KNmCOpmnQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We played with fun wobbly lines that guide your hands to the places where you need to connect things together. These were particularly delightful.
 
@@ -76,7 +76,7 @@ We explored many different ideas and interaction patterns during this phase. Her
 
 - We used the Quest Pro’s microphone to notify the system when you are ready for the next step. We explored recognizing hand gestures like a thumbs-up for this purpose, but we found that that led to lots of false positives as you worked with the pieces.
 
-[Microphone.mp4]
+{% include youtube.html id='XzaWY6YBou4?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 ## Delighting the user
 
@@ -84,13 +84,13 @@ After implementing so many fun mechanisms to guide the user, we realized that th
 
 To demonstrate that idea we added some animated toys to the kitchen that are displayed immediately after the last step is completed. By adding some invisible clipping planes to the scene, we made it possible for the virtual toys to be occluded by the real kitchen.
 
-[Ending_Toys.mp4]
+{% include youtube.html id='CXzawYi5ulo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 # Final prototype
 
 The video below presents all the ideas that were discussed in the previous section in their final form within our prototype.
 
-[Supercut.mp4]
+{% include youtube.html id='sn18abaSMg8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We implemented all 17 steps of the toy kitchen’s instruction manual. After playing with the prototype extensively, we reached the following answers to the questions that we laid out in the beginning of this article:
 
