@@ -68,11 +68,11 @@ We explored many different ideas and interaction patterns during this phase. Her
 
 - We played with fun wobbly lines that guide your hands to the places where you need to connect things together. These were particularly delightful.
 
-[Wobbly_Lines.mp4]
+{% include youtube.html id='J81KuLbOneo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We duct-taped the Quest Pro’s controllers to parent virtual objects to physical objects. This led to beautiful interactions like being able to move a virtual wireframe model of the toy kitchen along with the real toy kitchen.
 
-[Tilt.mp4]
+{% include youtube.html id='HTLwxL8lWbE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We used the Quest Pro’s microphone to notify the system when you are ready for the next step. We explored recognizing hand gestures like a thumbs-up for this purpose, but we found that that led to lots of false positives as you worked with the pieces.
 

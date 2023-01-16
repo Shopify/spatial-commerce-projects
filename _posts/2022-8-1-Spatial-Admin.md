@@ -16,7 +16,7 @@ With AR moving from phones to headsets, which are hands-free, a whole new world 
 
 We started by studying and playing with the many features of the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/).
 
-[Spatial_Admin_Interaction_SDK_Exploration.m4v]
+{% include youtube.html id='-mH0zUZeyW0?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We came away with better intuitions about natural interactions within VR today:
 
@@ -28,13 +28,13 @@ We found that there’s a surprising amount of wisdom already captured in the In
 
 We played with different skeuomorphic metaphors for our camera, first exploring a Polaroid camera. Users would need to use a two-handed framing gesture to summon the camera, and then they could hold it and press the shutter button with their index finger as if they were using a real camera. The camera would then spit out a Polaroid photo every time you took a picture, and each photo could be resized by holding it with two hands.
 
-[Spatial_Admin_Polaroid_Camera_Exploration.m4v]
+{% include youtube.html id='pIhF6bwiK5Q?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We liked how intuitive this approach was, but the camera felt imprecise. The screen on its back was small, and it littered the scene by leaving many Polaroid photos floating around, so we decided to try a different approach.
 
 The next skeuomorphic metaphor we tried was a video camera with a separate screen, which instantly solved the imprecision and litter problems. All users needed to do was pinch the camera to grab it, and as they moved it around the media on the screen would update in real time.
 
-[Spatial_Admin_Live_Camera_Exploration.m4v]
+{% include youtube.html id='g-LTdwj5qYg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We really felt like this was something big to discover too: it wasn’t that skeuomorphism itself was good or bad, it’s choosing the _right kind_ of metaphor to use in a situation. You’re designing both the UX of the objects and also the entire world at the same time - when you can make and do anything, it becomes increasingly important to do the right things.
 
@@ -42,13 +42,13 @@ This is slightly different from 2D web or mobile UX design, where often the patt
 
 Speaking of UX: we began with “always on” controls for lights and other studio elements, but the visual clutter quickly became overwhelming. We prototyped and built out a proximity reveal to help reduce visual noise while maintaining accessibility.
 
-[Spatial_Admin_Proximity_Controls.m4v]
+{% include youtube.html id='LKEhEcWYhcI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We also thought: why are controls a metaphor at all? What does a knob or dial do when you can do extra-physical virtual actions directly on models and interactable objects?
 
 So we immediately loved this reach-into-the-photo-to-edit-it idea: if an image is a render that we make, why isn’t every “still” actually secretly a little portal to itself such that reaching into it, making a tweak, and then pulling back out commits the change?
 
-[Spatial_Admin_Reach_Into_Photo_To_Edit_It.m4v]
+{% include youtube.html id='Oabg5iwM6aA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Way easier than an entire whole extra studio with a separate camera and everything, right? We were thinking too physically, too stuck in the times of taking a photo and uploading a JPG to a Shopify product page and then hitting ‘save’ and all that. This is AR! We own the rules of the universe!
 
@@ -62,13 +62,13 @@ The real reason to have a whole seemingly-redundant set of UI for the camera, li
 
 There might still be something to this idea, where moving into the picture frame expands it into your whole view such that you sort of teleport into the photo entirely (and then get a whole new room-space studio view to work with) instead of reaching into a small shoebox of the frame, but that might have to be explored in a future project.
 
-[Spatial_Admin_Zed_Mini_Hands.m4v]
+{% include youtube.html id='JCOjDiQx82w?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 # Final prototype
 
 The video below presents our vision of what editing a product image with a spatial user interface could look like in the future:
 
-[Spatial_Admin_Demo.mp4]
+{% include youtube.html id='TyBQWTL_urY?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 There is a lot to unpack here, so let’s talk about it.
 
@@ -78,7 +78,7 @@ On their left is a dashboard that shows them information about their Shopify sto
 
 The dashboard also includes a 3D globe that shows orders in real time. The merchant can spin the globe as if it were real. This physicality is something that we particularly love about spatial user interfaces. A clock no longer has to be a number on a screen, for example. It can be a 3D object that the user can grab and interact with. 3D widgets can be truly delightful when used sparingly and appropriately.
 
-[Spatial_Admin_BFCM_Globe.mp4]
+{% include youtube.html id='Rz9QP8h0Amk?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 In front of the merchant is their Shopify admin page. They click on the customize button with their index finger, and that brings up a preview of their shoe store.
 

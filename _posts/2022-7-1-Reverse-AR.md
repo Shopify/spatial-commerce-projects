@@ -10,7 +10,7 @@ We typically use AR to visualize products in our home to see how they _look_, bu
 
 Recently, photogrammetry apps like [Polycam](https://poly.cam/) and [Reality Capture](https://www.capturingreality.com/realitycapture) have made it easy for anyone to create a high fidelity model of their room using their iPhone. We [previously]({% post_url 2022-6-1-Space-Eraser %}) explored using Apple’s new RoomPlan API to create high fidelity room models as well. NeRFs are an exciting breakthrough in 3D capture and rendering that are taking 3D capture to new levels of fidelity.
 
-[Polycam.mp4]
+{% include youtube.html id='IQVOLBQLGto?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 We wondered if we could use these technologies to deliver the best of both worlds: _look_ and _feel_. We explored what it would be like to reverse the role AR typically plays: instead of rendering a _virtual thing_ in a _real room_ we’d render a _virtual room_ around a _real thing_.
 
@@ -36,7 +36,7 @@ In exploring this concept we had to solve two problems. We had to leverage exist
 
 We began by exploring classification and segmentation using [YOLOv3 and DeepLabV3](https://developer.apple.com/machine-learning/models/), but the quality of the segmentation didn’t pass the bar for our needs.
 
-[Segmentation.mp4]
+{% include youtube.html id='2mlHHZ3uvNY?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 In parallel, we explored RealityKit’s implementation, trying to figure out why Apple’s furniture segmentation worked so well. It looked to us like they were leveraging meshes constructed from LiDAR data.
 
@@ -44,15 +44,15 @@ In parallel, we explored RealityKit’s implementation, trying to figure out why
 
 We decided to use Unity and ARFoundation to explore meshing. We built a quick demo that generates a mesh for any object classified as a sofa and applies an occlusion material to it. That way, when a piece of furniture is surrounded by a virtual room, its mesh becomes a window into the real world that reveals the real object.
 
-[Unity_Meshing_Demo.mp4]
+{% include youtube.html id='Dstj9AjtB80?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 It captured the form well for some objects, but we weren’t happy with the edge quality. Pieces with thin parts or gaps weren’t meshed correctly, and cushions and cats poked holes in the meshes. All these problems broke the illusion.
 
-[Meshing_Problems.mp4]
+{% include youtube.html id='l9DPFGqqJ8c?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Along the way, we explored depth-based segmentation on LiDAR equipped devices, which worked surprisingly well when seated on the sofa, but not when a user stood up. This approach was promising but we needed to find a way to segment parts of the scene.
 
-[Simple_Depth.mp4]
+{% include youtube.html id='_0ve7PkZM1s?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 Then we discovered that we could use depth-based segmentation to more cleanly cut objects out of the scene if we had a bounding box to constrain the depth buffer to world space.
 
@@ -60,17 +60,17 @@ Then we discovered that we could use depth-based segmentation to more cleanly cu
 
 Here’s how it works:
 
-[Depth_Explanation_Video.mp4]
+{% include youtube.html id='a6I4bF6F-s8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 In parallel, we also needed to generate grounding shadows for real objects in the virtual scene. A top-down orthographic projection onto the floor plane of the chair’s computed mesh creates a sharp-looking shadow. Adding a gaussian blur to the effect softens the edges and makes it much more believable.
 
-[Shadows.mp4]
+{% include youtube.html id='ng4NkoWDrew?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 # Final prototype
 
 When you bring it all together, it’s a magical experience we can build with today’s technology. This prototype is running live in a real furniture store on an iPad Pro.
 
-[Reverse_AR_Prototype_Montage_2.mp4]
+{% include youtube.html id='l9IZ3vRH9eI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 The depth-based segmentation approach constrained by the bounding box produces incredible results, and it isn’t adversely affected by unrecognized objects like cushions and pets. In fact, with this approach, users can bring their pets into beautiful virtual worlds, even if they don’t want to come.
 
