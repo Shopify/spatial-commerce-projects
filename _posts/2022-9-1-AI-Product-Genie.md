@@ -39,13 +39,13 @@ The other caveat is the idea that an AI genie could deliver exactly what you hav
 
 One big prototyping unlock we discovered recently was an iOS app called [CamtrackAR](https://fxhome.com/product/camtrackar) which records the device accelerometer and tracks spatial anchor data alongside recording video, so the files it exports can easily be brought into Blender as fully fledged video “tracking” shots, which eliminates the often tedious process of visually tracking video from just RGB image data.
 
-[BRENNAN MAKE SOME CAMTRACK BEHIND THE SCENES SHOT HERE]
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/camtrack_ar_camera.gif){:.centered}
 
 The transitions between two given still images was done with [DAIN](https://sites.google.com/view/wenbobao/dain?pli=1), another AI system. We diffused each frame of the morph animation using the img2img feature with a low variance setting. This subtly remakes each frame as a complete “vision” unto itself, giving the illusion that Stable Diffusion is dreaming every frame of the transition. We did this manually, but this is a pipeline that could also be built in the cloud.
 
 So in the end we made a 2D video of the whole runtime that has all the stills, transitions and timing that the voiceover script demanded, and then that’s just inserted into the 3D scene as a video texture on a big plane that matches the wall. Add some clipping geometry for the objects in front of the wall to cut them out, and you basically have a complete VFX shot with just that.
 
-[SOME SORT OF IMAGE HERE]
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/wallpaper_camtrack.gif){:.centered}
 
 With that combined render in hand and working, we added a UX layer: the orb and the text overlay.
 
@@ -53,11 +53,11 @@ This wasn’t wildly novel, we’ve seen these types of designs and paradigms ev
 
 We originally had the orb in world space, so it floated around you like a character or drone might, but it felt distracting and chaotic, so we eventually settled on a screen-space version that just sits at the bottom like you might see camera UI buttons or similar.
 
-[PROTOTYPE VIDEO OF THE WORLDSPACE ORB FLAPPING ABOUT]
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/orb.gif){:.centered}
 
 One small fun thing to point out is that Blender actually just has a built in sound-to-curves button that automatically takes MP3 files and adds them to whichever curve you want, so in this case we drove some emission for the white lighting and displacement of a basic sphere mesh merely by cutting up the voiceover in the video to be the sound file with just the activation parts.
 
-[BLENDER SOUND TO CURVE HERE]
+![_config.yml]({{ site.baseurl }}/images/ai_product_genie/sound_to_f_curve.png){:.centered}
 
 And then to round it out, the most basic ever UI mockup for the sales page. 
 
