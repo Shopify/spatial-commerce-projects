@@ -18,25 +18,25 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 15px/1.8 $Merriweather;
   color: $darkGray;
 }
 
-.container {
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 0 10px;
-  width: 100%;
+.home {
+    background: $lighterGray;
+}
+
+.blog {
+    background: $white; 
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $DMSerif;
   color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 30px 0;
   padding: 0;
 
   @include mobile {
@@ -46,6 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
+  margin-top: 120px;
+  text-decoration: overline;
   a {
     color: inherit;
   }
@@ -53,10 +55,12 @@ h1 {
 
 h2 {
   font-size: 24px;
+  margin-left: 30px;
 }
 
 h3 {
   font-size: 20px;
+  margin-left: inherit;
 }
 
 h4 {
@@ -65,7 +69,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 30px 0 30px 30px;
 }
 
 a {
@@ -78,8 +82,8 @@ a {
 }
 
 ul, ol {
-  margin: 15px 0;
-  padding-left: 30px;
+  margin: 30px 0;
+  padding-left: 60px;
 }
 
 ul {
@@ -96,6 +100,10 @@ ol ul, ul ol, ul ul, ol ol {
 
 ul ul, ol ul {
   list-style-type: circle;
+}
+
+li {
+  padding-left: 30px;
 }
 
 em, i {
@@ -118,6 +126,7 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  margin: 60px 0;
 }
 
 // Specify the color of the selection
@@ -142,10 +151,43 @@ img {
     clear: both;
 }
 
-img.centered {
+img.centered, .posts img.left, .posts img.right {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 60px auto;
+  max-width: 100%;
+}
+
+.posts img.left, .posts img.right {
+    margin: 0;
+    float: none;
+}
+
+img.left {
+    float: left;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    max-width: 40%;
+
+    @include mobile {
+        //float: none;
+        //margin: 60px auto;
+        //max-width: 100%;
+    }
+}
+
+img.right {
+    float: right;
+    margin-top: 10px;
+    margin-left: 60px;
+    margin-bottom: 60px;
+    max-width: 45%;
+
+    @include mobile {
+        float: none;
+        margin: 60px auto;
+        max-width: 100%;
+    }
 }
 
 .text-align-center {
@@ -154,36 +196,44 @@ img.centered {
 
 .youtube-wrapper {
   position: relative;
-  width: 100%;
+  width: 95%;
+  margin: 60px 0 60px 30px;
   height: 0;
   padding-bottom: 56.25%;
 }
 
+.youtube-wrapper.left {
+    
+}
+
+.youtube-wrapper.right {
+}
+
 .youtube-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .title {
-  font-size: 30px;
-  a {
-    color: inherit;
-  }
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+    font-size: 48px;
+    a {
+        color: inherit;
+    }
 
-  line-height: 1.7;
-  margin: 0 0 15px;
-  padding: 0;
+    font-family: $DMSerif;
+    color: $darkerGray;
+    font-weight: bold;
+    line-height: 1.25;
+    margin: 12px 0 48px 0;
+    padding: 0;
 
-  @include mobile {
-    line-height: 1.4;
-  }
+    @include mobile {
+        line-height: 1.4;
+    }
 }
 
 .subtitle {
@@ -191,14 +241,16 @@ img.centered {
   a {
     color: inherit;
   }
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
-  text-decoration: underline;
+  font-family: $Martian;
+  color: $gray;
+  font-weight: 400;
+  font-kerning: auto;
+  text-transform: uppercase;
 
   line-height: 1.7;
   margin: 1.5em 0 0;
   padding: 0;
+  letter-spacing: .025em;
 
   @include mobile {
     line-height: 1.4;
@@ -220,31 +272,36 @@ img.centered {
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid $lightGray;
-
-  @include mobile {
-    text-align: center;
-  }
+  text-align: center;
 }
 
-.site-avatar {
-  float: left;
-  width: 70px;
-  height: 70px;
-  margin-right: 15px;
-
-  @include mobile {
-    float: none;
+.grid-container .site-avatar img, .site-avatar img {
+    width: 160px;
+    height: 160px;
     display: block;
-    margin: 0 auto;
-  }
+    object-fit:scale-down;
+    margin: 0;
 
-  img {
-    border-radius: 5px;
-  }
+    @include mobile {
+        //float: none;
+
+        margin: 0 auto;
+    }
+
+    img {
+        border-radius: 5px;
+    }
+}
+
+.site-avatar img {
+    float: none;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
 }
 
 .site-info {
-  float: left;
+  //float: left;
 
   @include mobile {
     float: none;
@@ -254,19 +311,32 @@ img.centered {
 }
 
 .site-name {
-  margin: 0;
-  color: $darkGray;
+  margin: .6em 10px .75em;
+  color: $black;
   cursor: pointer;
-  font-family: $helveticaNeue;
+  font-family: $Martian;
   font-weight: 300;
-  font-size: 28px;
-  letter-spacing: 1px;
+  font-size: 48px;
+  line-height: 1.4;
+  text-decoration: none;
+  letter-spacing: -2px;
+}
+
+.masthead .site-name {
+    margin-top: -2.3em;
+    margin-left: 30px;
+    font-size: 32px;
+}
+
+.container .site-name {
+    word-spacing: 100px;
 }
 
 .site-description {
-  margin: -5px 0 0 0;
-  color: $gray;
-  font-size: 16px;
+  font-family: $Merriweather;
+  color: $black;
+  font-size: 18px;
+  margin: 2.7em 10px;
 
   @include mobile {
     margin: 3px 0;
@@ -274,66 +344,123 @@ img.centered {
 }
 
 nav {
-  float: right;
-  margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue;
-  font-size: 18px;
-
-  @include mobile {
-    float: none;
-    margin-top: 9px;
-    display: block;
-    font-size: 16px;
-  }
-
-  a {
-    margin-left: 20px;
-    color: $darkGray;
-    text-align: right;
-    font-weight: 300;
-    letter-spacing: 1px;
+    float: right;
+    margin-top: 23px; // @TODO: Vertically middle align
+    font-family: $DMSerif;
+    font-size: 18px;
 
     @include mobile {
-      margin: 0 10px;
-      color: $blue;
+        float: none;
+        margin-top: 9px;
+        display: block;
+        font-size: 16px;
     }
-  }
+
+    a {
+        margin-left: 20px;
+        color: $darkGray;
+        text-align: right;
+        font-weight: 300;
+        letter-spacing: 1px;
+
+        @include mobile {
+            margin: 0 10px;
+            color: $blue;
+        }
+    }
 }
 
 //
 // .main
 //
-
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+header {
+    background: $lighterGray;
 }
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
+.grid-container {
+    margin: 0px auto;
+    max-width: 1400px;
+    padding: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px 30px;
+    align-items: stretch;
 }
+
+.grid-container > header.post {
+    width: 100%;
+    background: $lighterGray;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+}
+
+.grid-container > .post {
+    padding: 10px;
+    border: 1px solid #eee;
+    //box-shadow: 0 15px 20px $lighterGray;
+}
+
+.grid-container .title {
+    font-size: 36px;
+    margin: .25em 20px 3em;
+}
+
+.grid-container .subtitle {
+    font-size: 15px;
+    margin: 1em 20px .25em;
+}
+
+
+
+//.grid-container .title {
+//    font-size: 30px;
+//    margin: .25em 15px 3em;
+//}
+
+//.grid-container .subtitle {
+//    font-size: 20px;
+//    margin: .5em 15px .25em;
+//}
+
+.grid-container img {
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+    height: 300px; 
+}
+
+.grid-container .youtube-wrapper {
+    margin: 0;
+    width: 100%;
+    height: 200px;
+}
+
+//.grid-container p {
+//    margin: 0;
+//}
 
 .post {
-  blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
-    font-style: italic;
-  }
+    max-width: 740px;
+    margin: 0 auto;
+    background: $white; 
 
-  .comments {
-    margin-top: 10px;
-  }
+    blockquote {
+        margin: 1.8em .8em;
+        border-left: 2px solid $gray;
+        padding: 0.1em 1em;
+        color: $gray;
+        font-size: 22px;
+        font-style: italic;
+    }
+
+    .comments {
+        margin-top: 10px;
+    }
 }
 
 .wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
 }
 
 footer {

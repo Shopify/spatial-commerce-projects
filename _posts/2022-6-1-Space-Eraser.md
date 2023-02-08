@@ -1,7 +1,8 @@
 ---
 layout: post
 title: What if your room had a reset button?
-subtitle: Space Eraser
+subtitle: Space_Eraser
+image: /images/space_eraser/space_eraser_popcorn.gif
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_popcorn.gif){:.centered}

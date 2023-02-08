@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Could AI make every shopper’s wish come true?
-subtitle: AI Product Genie
+subtitle: AI_Product_Genie
+image: /images/ai_product_genie/victorian_hot_dog_wallpaper.png
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/ai_product_genie/victorian_hot_dog_wallpaper.png){:.centered}

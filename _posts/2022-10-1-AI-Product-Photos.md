@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Could AI unlock unlimited product photography?
-subtitle: AI Product Photography
+subtitle: AI_Product_Photography
+image: /images/ai_product_photos/shoe_overview.png
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/ai_product_photos/shoe_overview.png){:.centered}

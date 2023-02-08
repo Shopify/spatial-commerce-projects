@@ -6,7 +6,7 @@
 name: Spatial Commerce
 
 # Short bio or description (displayed in the header)
-description: Exploring the future of commerce beyond the 2D page
+description: A Shopify labs team, prototyping at the intersection of spatial computing and commerce.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: images/globe_logo.png
@@ -73,7 +73,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 

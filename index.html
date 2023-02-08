@@ -2,21 +2,20 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+{% for post in site.posts %}
+<article class="post">
 
-      <div class="subtitle">
+    <div class="stub-image">
+        <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" /></a>
+    </div>
+
+    <div class="subtitle">
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.subtitle }}</a>
-      </div>
+    </div>
 
-      <div class="title">
+    <div class="title">
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </div>
+    </div>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-    </article>
-  {% endfor %}
-</div>
+</article>
+{% endfor %}
