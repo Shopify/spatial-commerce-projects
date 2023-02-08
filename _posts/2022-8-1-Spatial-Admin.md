@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Could AR glasses revolutionize media creation?
-subtitle: Spatial Admin
+subtitle: Spatial_Admin
+image: /images/spatial_admin/spatial_admin_concept_art.png
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/spatial_admin/spatial_admin_concept_art.png){:.centered}

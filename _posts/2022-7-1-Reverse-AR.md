@@ -1,7 +1,8 @@
 ---
 layout: post
 title: What if you could bring your home shopping?
-subtitle: Reverse AR
+subtitle: Reverse_AR
+image: /images/reverse_ar/Reverse AR - Prototype Montage 3.gif
 ---
 
 {% include youtube.html id='4FmCO5k8D9I?modestbranding=1&amp;showinfo=0&amp;rel=0' %}

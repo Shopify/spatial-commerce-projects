@@ -1,22 +1,17 @@
 ---
 layout: post
-title: What could instruction manuals look like in the future?
-subtitle: Instructional AR
+title: What might instruction manuals look like in the future?
+subtitle: Instructional_AR
+image: /images/instructional_ar/steps_1_2_3.png
 ---
 
-The year is 2022, and instruction manuals continue to look just like they have for decades: they are little paper booklets with 2D diagrams of 3D objects.
+![_config.yml]({{ site.baseurl }}/images/instructional_ar/steps_1_2_3.png){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/instructional_ar/steps_1_2_3.png){:.centered}
+It’s surprising how much ambiguity is created when you take a 3D object and you compress it down into a 2D image. That ambiguity is the source of many mistakes during the assembly process. Mistakes like using the wrong screws to connect two pieces together, or connecting a piece with the incorrect face pointing outwards.
 
-It’s surprising how much ambiguity is created when you take a 3D object and you compress it down into a 2D image.
-
-That ambiguity is the source of many mistakes during the assembly process. Mistakes like using the wrong screws to connect two pieces together, or connecting a piece with the incorrect face pointing outwards.
-
-With the arrival of Meta’s Quest Pro headset, which supports color passthrough, we wondered if we could redefine what an instruction manual looks like by turning it into an AR experience.
+With the arrival of Meta’s Quest Pro headset, we wanted to reimagine the assembly process from the ground up to explore this future.
 
 Would seeing the assembly steps in 3D eliminate the ambiguity usually associated with instruction manuals? And would it be more comfortable than a paper booklet that you are constantly picking up and putting down? And could this technology scale for companies that need to produce instruction manuals for hundreds or thousands of products?
-
-Those were the questions that we set out to answer.
 
 {% include youtube.html id='hGQofWT2-z8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
@@ -26,13 +21,15 @@ Those were the questions that we set out to answer.
 
 The first step in the exploration phase was choosing the product that we would center our prototype around. The obvious choice was a piece of furniture, since most people are familiar with the experience (and struggles) of assembling furniture at home.
 
-After considering a few different options, we decided to go with a toy kitchen made by a Shopify merchant called Hape.
+![_config.yml]({{ site.baseurl }}/images/instructional_ar/hape_kitchen.png){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/instructional_ar/hape_kitchen.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/instructional_ar/parts.png){:.right}
+
+After considering a few different options, we decided to go with a toy kitchen made by a Shopify merchant called Hape.
 
 The instruction manual of the toy kitchen teaches you how to put it together in 17 steps, and the kitchen itself consists of 20 unique pieces that are connected together using 10 screws and 10 bolts. We felt that this product had the perfect amount of complexity to test our AR concept.
 
-![_config.yml]({{ site.baseurl }}/images/instructional_ar/parts.png){:.centered}
+
 
 If our technology couldn’t teach you how to assemble a toy kitchen, then it definitely didn’t have legs for anything else.
 
@@ -54,8 +51,7 @@ With the object tracking problem solved, now came the fun part: how would we gui
 
 We explored many different ideas and interaction patterns during this phase. Here are the most interesting ones:
 
-- We thought it would be fun to have an animated helper that keeps track of your hands and alerts you when you grab an incorrect piece. The alert can take the form of a speech bubble, an audio clip or just a nod of the character’s head. It’s surprising how expressive an animation by itself can be.
-
+- We thought it would be fun to have an animated helper that keeps track of your hands and alerts you when you grab an incorrect piece. The alert can take the form of a speech bubble, an audio clip or just a nod of the character’s head. It’s surprising how expressive an animation by itself can be. 
 {% include youtube.html id='_Zv1IxLZY8M?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
 - We implemented ghost pieces that travel from their knolled positions to their final positions on a reference model of what you are assembling. This ended up being our most commonly used pattern. It’s simple and effective at telling you what to do.

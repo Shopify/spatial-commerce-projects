@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Could AR revolutionize retail store design?
-subtitle: Retail Research Kit
+subtitle: Retail_Research_Kit
+image: /images/retail_research_kit/concept_art.png
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/retail_research_kit/concept_art.png){:.centered}
