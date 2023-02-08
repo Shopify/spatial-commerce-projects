@@ -69,7 +69,7 @@ h4 {
 }
 
 p {
-  margin: 30px 0 30px 30px;
+  margin: 30px;
 }
 
 a {
@@ -82,7 +82,7 @@ a {
 }
 
 ul, ol {
-  margin: 30px 0;
+  margin: 30px 30px 30px 10px;
   padding-left: 60px;
 }
 
@@ -185,7 +185,7 @@ img.right {
 
     @include mobile {
         float: none;
-        margin: 60px auto;
+        margin: 60px 30px 60px 0;
         max-width: 100%;
     }
 }
@@ -196,8 +196,7 @@ img.right {
 
 .youtube-wrapper {
   position: relative;
-  width: 95%;
-  margin: 60px 0 60px 30px;
+  margin: 60px 30px 60px 30px;
   height: 0;
   padding-bottom: 56.25%;
 }
@@ -237,7 +236,7 @@ img.right {
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 18px;
   a {
     color: inherit;
   }
@@ -269,33 +268,38 @@ img.right {
   margin-bottom: 50px;
 }
 
+.container {
+    background: $lighterGray;
+    border-bottom: 1px solid $lightGray;
+}
+
 .masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
-  text-align: center;
+    padding: 20px 0;
+    max-width: 740px;
+    margin: 0 auto;
 }
 
 .grid-container .site-avatar img, .site-avatar img {
-    width: 160px;
-    height: 160px;
+    width: 90px;
+    height: 90px;
     display: block;
-    object-fit:scale-down;
+    object-fit: scale-down;
     margin: 0;
 
     @include mobile {
         margin: 0 auto;
     }
+}
 
-    img {
-        border-radius: 5px;
-    }
+.masthead .site-avatar img {
+    width: 50px;
+    height: 50px;
+    float:left;
 }
 
 .site-avatar img {
-    float: none;
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
 }
 
 .site-info {
@@ -308,25 +312,26 @@ img.right {
 }
 
 .site-name {
-  margin: .6em 10px .75em;
+  margin: .75em 10px .75em;
   color: $black;
   cursor: pointer;
   font-family: $Martian;
   font-weight: 300;
-  font-size: 48px;
+  font-size: 46px;
   line-height: 1.4;
   text-decoration: none;
   letter-spacing: -2px;
+
+  @include mobile {
+      margin: 0;
+      text-align: center;
+  }
 }
 
 .masthead .site-name {
-    margin-top: -2.3em;
-    margin-left: 30px;
-    font-size: 32px;
-}
-
-.container .site-name {
-    word-spacing: 100px;
+    font-size: 24px;
+    margin: .4em 10px;
+    float: left;
 }
 
 .site-description {
@@ -337,6 +342,7 @@ img.right {
 
   @include mobile {
     margin: 3px 0;
+    text-align: center;
   }
 }
 
@@ -370,9 +376,6 @@ nav {
 //
 // .main
 //
-header {
-    background: $lighterGray;
-}
 
 .grid-container {
     margin: 0px auto;
@@ -394,8 +397,7 @@ header {
 }
 
 .grid-container > .post {
-    padding: 10px;
-    border: 1px solid #eee;
+    border-bottom: 1px solid $lightGray;
 }
 
 .grid-container .title {
@@ -422,9 +424,10 @@ header {
 }
 
 .post {
+    padding: 10px;
     max-width: 740px;
     margin: 0 auto;
-    background: $white; 
+    background: $white;
 
     blockquote {
         margin: 1.8em .8em;
