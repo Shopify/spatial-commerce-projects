@@ -14,6 +14,10 @@ class BackgroundCanvas {
     this.handleResize = this.handleResize.bind(this);
     this.updateInstanceMatrices = this.updateInstanceMatrices.bind(this);
     this.animate = this.animate.bind(this);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+
+    this.pointer = new THREE.Vector2();
+    this.raycaster = new THREE.Raycaster();
 
     this.renderer = new THREE.WebGLRenderer();
     this.renderer.setClearColor(0xFFFFFF, 1);
@@ -79,16 +83,24 @@ class BackgroundCanvas {
   }
 
   updateInstanceMatrices() {
+    this.raycaster.setFromCamera(this.pointer, this.camera);
+
+    const rot2 = (new THREE.Matrix4());
+    rot2.lookAt(new THREE.Vector3(0, 0, 0), this.raycaster.ray.direction.negate().multiplyScalar(0.01), new THREE.Vector3(0, 1, 0));
+
     const rot = new THREE.Matrix4();
     rot.makeRotationX(Math.PI * 0.5);
+
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
       const x = 5.5 - (px * 0.3);
       const y = 3 - (py * 0.3);
-      this.instanceMatrix.makeTranslation(x, y, -2).multiply(rot);
+
+      this.instanceMatrix.makeTranslation(x, y, -2).multiply(rot).multiply(rot2);
       this.mesh.setMatrixAt(i, this.instanceMatrix);
     }
+    this.mesh.instanceMatrix.needsUpdate = true;
   }
 
   animate() {
@@ -97,10 +109,16 @@ class BackgroundCanvas {
     this.camera.position.y = window.scrollY * -0.001;
     this.composer.render();
   }
+
+  handleMouseMove(ev) {
+    this.pointer.x = (ev.clientX / window.innerWidth) * 2 - 1;
+    this.pointer.y = - (ev.clientY / window.innerHeight) * 2 + 1;
+  }
 }
 
 const bkg = new BackgroundCanvas(1000);
 
 window.addEventListener('resize', bkg.handleResize);
+window.addEventListener('mousemove', bkg.handleMouseMove);
 
 bkg.animate();
