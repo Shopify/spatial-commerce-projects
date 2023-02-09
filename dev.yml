@@ -1,0 +1,12 @@
+name: spatial-commerce-projects
+
+type: ruby
+
+up:
+  - ruby: 3.2.0
+  - bundler
+
+commands:
+  develop:
+    run: bundle exec jekyll serve
+    desc: 'Jekyll serve locally for development purposes'
