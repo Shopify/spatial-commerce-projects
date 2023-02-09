@@ -4,6 +4,9 @@ import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
 import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
 import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
 
+const UP = new THREE.Vector3(0, 1, 0);
+const DEFAULT_MESH_ROTATION = (new THREE.Matrix4()).makeRotationX(Math.PI * 0.5);
+
 class BackgroundCanvas {
   constructor(count) {
     this.count = count;
@@ -84,20 +87,22 @@ class BackgroundCanvas {
 
   updateInstanceMatrices() {
     this.raycaster.setFromCamera(this.pointer, this.camera);
+    const offset = this.raycaster.ray.direction.clone().multiplyScalar(1.2);
+    const target = this.raycaster.ray.origin.clone().add(offset);
 
-    const rot2 = (new THREE.Matrix4());
-    rot2.lookAt(new THREE.Vector3(0, 0, 0), this.raycaster.ray.direction.negate().multiplyScalar(0.01), new THREE.Vector3(0, 1, 0));
-
+    const pos = new THREE.Vector3(0, 0, 0);
     const rot = new THREE.Matrix4();
-    rot.makeRotationX(Math.PI * 0.5);
-
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      const x = 5.5 - (px * 0.3);
-      const y = 3 - (py * 0.3);
-
-      this.instanceMatrix.makeTranslation(x, y, -2).multiply(rot).multiply(rot2);
+      pos.x = 5.5 - (px * 0.3);
+      pos.y = 3 - (py * 0.3);
+      pos.z = -2;
+      rot.lookAt(pos, target, UP);
+      this.instanceMatrix
+        .makeTranslation(pos.x, pos.y, pos.z)
+        .multiply(DEFAULT_MESH_ROTATION)
+        .multiply(rot);
       this.mesh.setMatrixAt(i, this.instanceMatrix);
     }
     this.mesh.instanceMatrix.needsUpdate = true;
