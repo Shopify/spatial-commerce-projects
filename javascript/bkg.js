@@ -51,6 +51,10 @@ class BackgroundCanvas {
     this.scene.add(this.hemisphereLight);
 
     this.instanceMatrix = new THREE.Matrix4();
+    this.instancePos = new THREE.Vector3();
+    this.instanceRotMat = new THREE.Matrix4();
+    this.instanceOffset = new THREE.Vector3();
+    this.instanceTarget = new THREE.Vector3();
     this.mesh = new THREE.InstancedMesh(this.boxGeometry, this.boxMaterial, this.count);
     this.updateInstanceMatrices();
     this.scene.add(this.mesh);
@@ -87,22 +91,20 @@ class BackgroundCanvas {
 
   updateInstanceMatrices() {
     this.raycaster.setFromCamera(this.pointer, this.camera);
-    const offset = this.raycaster.ray.direction.clone().multiplyScalar(1.2);
-    const target = this.raycaster.ray.origin.clone().add(offset);
+    this.instanceOffset.copy(this.raycaster.ray.direction).multiplyScalar(1.2);
+    this.instanceTarget.copy(this.raycaster.ray.origin).add(this.instanceOffset);
 
-    const pos = new THREE.Vector3(0, 0, 0);
-    const rot = new THREE.Matrix4();
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      pos.x = 5.5 - (px * 0.3);
-      pos.y = 3 - (py * 0.3);
-      pos.z = -2;
-      rot.lookAt(pos, target, UP);
+      this.instancePos.x = 5.5 - (px * 0.3);
+      this.instancePos.y = 3 - (py * 0.3);
+      this.instancePos.z = -2;
+      this.instanceRotMat.lookAt(this.instancePos, this.instanceTarget, UP);
       this.instanceMatrix
-        .makeTranslation(pos.x, pos.y, pos.z)
+        .makeTranslation(this.instancePos.x, this.instancePos.y, this.instancePos.z)
         .multiply(DEFAULT_MESH_ROTATION)
-        .multiply(rot);
+        .multiply(this.instanceRotMat);
       this.mesh.setMatrixAt(i, this.instanceMatrix);
     }
     this.mesh.instanceMatrix.needsUpdate = true;
