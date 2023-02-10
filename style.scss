@@ -245,7 +245,7 @@ img.right {
     }
 
     font-family: $DMSerif;
-    color: $darkerGray;
+    color: $black;
     font-weight: bold;
     line-height: 1.25;
     margin: 12px 0 48px 0;
@@ -305,10 +305,10 @@ img.right {
     height: 90px;
     display: block;
     object-fit: scale-down;
-    margin: 0;
+    margin: 60px 0 40px;
 
     @include mobile {
-        margin: 0 auto;
+        margin: 60px auto 40px;
         width: 70px;
         height: 70px;
     }
@@ -318,6 +318,7 @@ img.right {
     width: 50px;
     height: 50px;
     float:left;
+    margin: 0;
 
     @include mobile {
         width: 30px;
@@ -335,18 +336,17 @@ img.right {
   @include mobile {
     float: none;
     display: block;
-    margin: 15px auto;
   }
 }
 
 .site-name {
-  margin: .75em 10px .75em;
-  color: $black;
+  margin: 30px 10px 30px;
+  color: $darkGray;
   cursor: pointer;
   font-family: $Martian;
   font-weight: 300;
   font-size: 24px;
-  line-height: 1.4;
+  line-height: 1.7;
   text-decoration: none;
   letter-spacing: -1px;
 
@@ -370,17 +370,30 @@ img.right {
 
 .site-description {
   font-family: $Merriweather;
-  color: $black;
-  font-size: 18px;
-  margin: 2.7em 10px;
+  color: $darkGray;
+  font-size: 16px;
+  margin: 40px 10px 80px;
 
   @include mobile {
-    margin: 30px 0;
+    margin: 40px 0 80px;
     text-align: center;
     font-size: 14px;
     line-height: 1.5em;
   }
 }
+
+.byline {
+    font-size: 11px;
+    color: $lightGray;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 10px;
+
+    @include mobile {
+        text-align: center;
+    }
+}
+ 
 
 nav {
     float: right;
@@ -434,9 +447,13 @@ nav {
     background: linear-gradient(180deg, rgba(255,255,255,0.6965379901960784) 0%, rgba(255,255,255,0.5032606792717087) 100%);
     box-shadow: none;
     border: none;
-    padding: 20px;
+    padding: 15px;
     display: inline;
     align-self: start;
+
+    @include mobile {
+        padding: 40px;
+    }
 }
 
 .grid-container > .post {
@@ -448,20 +465,12 @@ nav {
 
 .grid-container .title {
     font-size: 36px;
-    margin: .25em 20px 3em;
-
-    @include mobile {
-        margin: .25em 15px 3em;
-    }
+    margin: .25em 15px 3em;
 }
 
 .grid-container .subtitle {
     font-size: 15px;
-    margin: 1em 20px .25em;
-
-    @include mobile {
-        margin: 1em 15px .25em;
-    }
+    margin: 1em 15px .25em;
 }
 
 .grid-container img {
