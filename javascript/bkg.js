@@ -13,7 +13,7 @@ class BackgroundCanvas {
     this.speed = 0.00012;
     this.noiseScale = 0.224;
     this.effectStrength = 0.35;
-    this.spacingX = 0.0125;
+    this.spacingX = 0.0164;
     this.spacingY = 0.02;
     this.mouseStrength = 0.008;
 
@@ -181,8 +181,8 @@ const bkgCountLabel = document.getElementById('bkg-count-label');
 const updateCountLabel = () => {
   bkgCountLabel.textContent = 'Count ' + bkgCount.value;
 };
-updateCountLabel();
 bkgCount.value = bkg.count;
+updateCountLabel();
 
 bkgCount.addEventListener('input', () => {
   updateCountLabel();
@@ -197,8 +197,8 @@ const bkgSpeedLabel = document.getElementById('bkg-speed-label');
 const updateSpeedLabel = () => {
   bkgSpeedLabel.textContent = 'Speed ' + bkgSpeed.value;
 };
-updateSpeedLabel();
 bkgSpeed.value = bkg.speed;
+updateSpeedLabel();
 
 bkgSpeed.addEventListener('input', () => {
   updateSpeedLabel();
@@ -213,8 +213,8 @@ const bkgNoiseScaleLabel = document.getElementById('bkg-noise-scale-label');
 const updateNoiseScaleLabel = () => {
   bkgNoiseScaleLabel.textContent = 'Noise Scale ' + bkgNoiseScale.value;
 };
-updateNoiseScaleLabel();
 bkgNoiseScale.value = bkg.noiseScale;
+updateNoiseScaleLabel();
 
 bkgNoiseScale.addEventListener('input', () => {
   updateNoiseScaleLabel();
@@ -229,8 +229,8 @@ const bkgEffectStrengthLabel = document.getElementById('bkg-effect-strength-labe
 const updateEffectStrengthLabel = () => {
   bkgEffectStrengthLabel.textContent = 'Effect Strength ' + bkgEffectStrength.value;
 };
-updateEffectStrengthLabel();
 bkgEffectStrength.value = bkg.effectStrength;
+updateEffectStrengthLabel();
 
 bkgEffectStrength.addEventListener('input', () => {
   updateEffectStrengthLabel();
@@ -245,8 +245,8 @@ const bkgSpacingXLabel = document.getElementById('bkg-spacing-x-label');
 const updateSpacingXLabel = () => {
   bkgSpacingXLabel.textContent = 'Spacing X ' + bkgSpacingX.value;
 };
-updateSpacingXLabel();
 bkgSpacingX.value = bkg.spacingX;
+updateSpacingXLabel();
 
 bkgSpacingX.addEventListener('input', () => {
   updateSpacingXLabel();
@@ -261,8 +261,8 @@ const bkgSpacingYLabel = document.getElementById('bkg-spacing-y-label');
 const updateSpacingYLabel = () => {
   bkgSpacingYLabel.textContent = 'Spacing Y ' + bkgSpacingY.value;
 };
-updateSpacingYLabel();
 bkgSpacingY.value = bkg.spacingY;
+updateSpacingYLabel();
 
 bkgSpacingY.addEventListener('input', () => {
   updateSpacingYLabel();
@@ -277,8 +277,8 @@ const bkgMouseStrengthLabel = document.getElementById('bkg-mouse-strength-label'
 const updateMouseStrengthLabel = () => {
   bkgMouseStrengthLabel.textContent = 'Mouse Strength ' + bkgMouseStrength.value;
 };
-updateMouseStrengthLabel();
 bkgMouseStrength.value = bkg.mouseStrength;
+updateMouseStrengthLabel();
 
 bkgMouseStrength.addEventListener('input', () => {
   updateMouseStrengthLabel();
@@ -293,8 +293,8 @@ const bkgCapsuleRadiusLabel = document.getElementById('bkg-capsule-radius-label'
 const updateCapsuleRadiusLabel = () => {
   bkgCapsuleRadiusLabel.textContent = 'Capsule Radius ' + bkgCapsuleRadius.value;
 };
-updateCapsuleRadiusLabel();
 bkgCapsuleRadius.value = bkg.boxGeometry.radius;
+updateCapsuleRadiusLabel();
 
 bkgCapsuleRadius.addEventListener('input', () => {
   updateCapsuleRadiusLabel();
@@ -310,8 +310,8 @@ const bkgCapsuleLengthLabel = document.getElementById('bkg-capsule-length-label'
 const updateCapsuleLengthLabel = () => {
   bkgCapsuleLengthLabel.textContent = 'Capsule Length ' + bkgCapsuleLength.value;
 };
-updateCapsuleLengthLabel();
 bkgCapsuleLength.value = bkg.boxGeometry.length;
+updateCapsuleLengthLabel();
 
 bkgCapsuleLength.addEventListener('input', () => {
   updateCapsuleLengthLabel();
@@ -327,8 +327,8 @@ const bkgCameraZLabel = document.getElementById('bkg-camera-z-label');
 const updateCameraZLabel = () => {
   bkgCameraZLabel.textContent = 'Camera Z ' + bkgCameraZ.value;
 };
-updateCameraZLabel();
 bkgCameraZ.value = bkg.camera.position.z;
+updateCameraZLabel();
 
 bkgCameraZ.addEventListener('input', () => {
   updateCameraZLabel();
