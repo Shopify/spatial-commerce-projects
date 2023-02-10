@@ -113,8 +113,8 @@ class BackgroundCanvas {
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      this.instancePos.x = 0.25 - (px * 0.0175);
-      this.instancePos.y = 0.25 - (py * 0.0175);
+      this.instancePos.x = 0.25 - (px * 0.0125);
+      this.instancePos.y = 0.25 - (py * 0.0125);
       this.instancePos.z = -0.27;
       this.instanceMouseMat.lookAt(this.instancePos, this.instanceTarget, UP);
       const noiseX = cnoise(new THREE.Vector2(px * multiple, t)) * dampening;
@@ -142,7 +142,7 @@ class BackgroundCanvas {
   }
 }
 
-const bkg = new BackgroundCanvas(1000);
+const bkg = new BackgroundCanvas(2000);
 
 window.addEventListener('resize', bkg.handleResize);
 window.addEventListener('mousemove', bkg.handleMouseMove);
