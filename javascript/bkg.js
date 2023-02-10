@@ -4,8 +4,9 @@ import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
 import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
 import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
 
+import cnoise from './perlin.js';
+
 const UP = new THREE.Vector3(0, 1, 0);
-const DEFAULT_MESH_ROTATION = (new THREE.Matrix4()).makeRotationX(Math.PI * 0.5);
 
 class BackgroundCanvas {
   constructor(count) {
@@ -23,20 +24,22 @@ class BackgroundCanvas {
     this.raycaster = new THREE.Raycaster();
 
     this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setClearColor(0xFFFFFF, 1);
+    this.renderer.setClearColor(0x000000, 1);
     this.elt = this.setupCanvasElement();
     this.handleResize();
+
+    this.textureLoader = new THREE.TextureLoader();
 
     this.scene = new THREE.Scene();
 
     this.composer = new EffectComposer(this.renderer);
     this.renderPass = new RenderPass(this.scene, this.camera);
     this.composer.addPass(this.renderPass);
-    this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
-    this.composer.addPass(this.bloomPass);
+    //this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
+    //this.composer.addPass(this.bloomPass);
 
-    this.boxGeometry = new THREE.CapsuleGeometry(0.1, 1, 10, 20);
-    this.boxMaterial = new THREE.MeshPhysicalMaterial({color: 0xffffff});
+    this.boxGeometry = new THREE.CapsuleGeometry(0.0025, 0.25, 10, 20);
+    this.boxMaterial = new THREE.MeshDepthMaterial();
 
     this.directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
     this.scene.add(this.directionalLight);
@@ -53,11 +56,19 @@ class BackgroundCanvas {
     this.instanceMatrix = new THREE.Matrix4();
     this.instancePos = new THREE.Vector3();
     this.instanceRotMat = new THREE.Matrix4();
+    this.instanceMouseMat = new THREE.Matrix4();
     this.instanceOffset = new THREE.Vector3();
     this.instanceTarget = new THREE.Vector3();
     this.mesh = new THREE.InstancedMesh(this.boxGeometry, this.boxMaterial, this.count);
     this.updateInstanceMatrices();
     this.scene.add(this.mesh);
+
+    this.noiseTexture = null;
+    this.textureLoader.load('textures/noise.png', (texture) => {
+      this.noiseTexture = texture;
+    }, undefined, (err) => {
+      console.log('Could not load noise texture');
+    })
   }
 
   setupCanvasElement() {
@@ -73,7 +84,7 @@ class BackgroundCanvas {
   }
 
   setupCamera() {
-    return new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    return new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.14, 0.5);
   }
 
   handleResize() {
@@ -82,29 +93,37 @@ class BackgroundCanvas {
     if (this.renderPass) {
       this.renderPass.camera = this.camera;
 
-      this.composer.removePass(this.bloomPass);
-      this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
-      this.composer.addPass(this.bloomPass);
+      //this.composer.removePass(this.bloomPass);
+      //this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
+      //this.composer.addPass(this.bloomPass);
     }
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
   updateInstanceMatrices() {
     this.raycaster.setFromCamera(this.pointer, this.camera);
-    this.instanceOffset.copy(this.raycaster.ray.direction).multiplyScalar(1.2);
+    this.instanceOffset.copy(this.raycaster.ray.direction).multiplyScalar(0.05);
     this.instanceTarget.copy(this.raycaster.ray.origin).add(this.instanceOffset);
+
+    const speed = 0.00025;
+    const t = new Date().getTime() * speed;
+    const multiple = 0.5;
+    const dampening = 0.35;
 
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      this.instancePos.x = 5.5 - (px * 0.3);
-      this.instancePos.y = 3 - (py * 0.3);
-      this.instancePos.z = -2;
-      this.instanceRotMat.lookAt(this.instancePos, this.instanceTarget, UP);
+      this.instancePos.x = 0.25 - (px * 0.0175);
+      this.instancePos.y = 0.25 - (py * 0.0175);
+      this.instancePos.z = -0.27;
+      this.instanceMouseMat.lookAt(this.instancePos, this.instanceTarget, UP);
+      const noiseX = cnoise(new THREE.Vector2(px * multiple, t)) * dampening;
+      const noiseZ = cnoise(new THREE.Vector2(t, py * multiple)) * dampening;
+      this.instanceRotMat.makeRotationFromEuler(new THREE.Euler((Math.PI * 0.5) + noiseX, 0, noiseZ));
       this.instanceMatrix
         .makeTranslation(this.instancePos.x, this.instancePos.y, this.instancePos.z)
-        .multiply(DEFAULT_MESH_ROTATION)
-        .multiply(this.instanceRotMat);
+        .multiply(this.instanceRotMat)
+        .multiply(this.instanceMouseMat);
       this.mesh.setMatrixAt(i, this.instanceMatrix);
     }
     this.mesh.instanceMatrix.needsUpdate = true;
@@ -113,7 +132,7 @@ class BackgroundCanvas {
   animate() {
     requestAnimationFrame(this.animate);
     this.updateInstanceMatrices();
-    this.camera.position.y = window.scrollY * -0.001;
+    this.camera.position.y = window.scrollY * -0.0001;
     this.composer.render();
   }
 
