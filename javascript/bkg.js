@@ -59,6 +59,8 @@ class BackgroundCanvas {
     this.instanceMouseMat = new THREE.Matrix4();
     this.instanceOffset = new THREE.Vector3();
     this.instanceTarget = new THREE.Vector3();
+    this.instanceEuler = new THREE.Euler();
+    this.instanceNoiseUV = new THREE.Vector2();
     this.mesh = new THREE.InstancedMesh(this.boxGeometry, this.boxMaterial, this.count);
     this.scene.add(this.mesh);
 
@@ -116,9 +118,11 @@ class BackgroundCanvas {
       this.instancePos.y = 0.25 - (py * 0.0125);
       this.instancePos.z = -0.27;
       this.instanceMouseMat.lookAt(this.instancePos, this.instanceTarget, UP);
-      const noiseX = cnoise(new THREE.Vector2(px * multiple, t)) * dampening;
-      const noiseZ = cnoise(new THREE.Vector2(t, py * multiple)) * dampening;
-      this.instanceRotMat.makeRotationFromEuler(new THREE.Euler((Math.PI * 0.5) + noiseX, 0, noiseZ));
+      this.instanceNoiseUV.set(px * multiple, t);
+      this.instanceEuler.x = (Math.PI * 0.5) + (cnoise(this.instanceNoiseUV) * dampening);
+      this.instanceNoiseUV.set(t, py * multiple);
+      this.instanceEuler.z = cnoise(this.instanceNoiseUV) * dampening;
+      this.instanceRotMat.makeRotationFromEuler(this.instanceEuler);
       this.instanceMatrix
         .makeTranslation(this.instancePos.x, this.instancePos.y, this.instancePos.z)
         .multiply(this.instanceRotMat)
