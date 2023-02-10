@@ -56,6 +56,10 @@ h1 {
 h2 {
   font-size: 24px;
   margin-left: 30px;
+
+  @include mobile {
+      margin-left: 15px;
+  }
 }
 
 h3 {
@@ -70,6 +74,10 @@ h4 {
 
 p {
   margin: 30px;
+
+  @include mobile {
+      margin: 20px 15px;
+  }
 }
 
 a {
@@ -84,6 +92,11 @@ a {
 ul, ol {
   margin: 30px 30px 30px 10px;
   padding-left: 60px;
+
+  @include mobile {
+      margin-left: 0;
+      padding-left: 30px;
+  }
 }
 
 ul {
@@ -104,6 +117,10 @@ ul ul, ol ul {
 
 li {
   padding-left: 30px;
+
+  @include mobile {
+      padding-left: 15px;
+  }
 }
 
 em, i {
@@ -171,7 +188,7 @@ img.left {
 
     @include mobile {
         float: none;
-        margin: 60px auto;
+        margin: 15px 0;
         max-width: 100%;
     }
 }
@@ -185,7 +202,7 @@ img.right {
 
     @include mobile {
         float: none;
-        margin: 60px 30px 60px 0;
+        margin: 15px 0;
         max-width: 100%;
     }
 }
@@ -196,9 +213,13 @@ img.right {
 
 .youtube-wrapper {
   position: relative;
-  margin: 60px 30px 60px 30px;
+  margin: 60px 30px;
   height: 0;
   padding-bottom: 56.25%;
+
+  @include mobile {
+      margin: 40px 15px;
+  }
 }
 
 .youtube-wrapper.left {
@@ -265,7 +286,7 @@ img.right {
 //
 
 .wrapper-masthead {
-  margin-bottom: 50px;
+  //margin-bottom: 30px;
 }
 
 .container {
@@ -274,7 +295,7 @@ img.right {
 }
 
 .masthead {
-    padding: 20px 0;
+    padding: 10px 10px;
     max-width: 740px;
     margin: 0 auto;
 }
@@ -288,6 +309,8 @@ img.right {
 
     @include mobile {
         margin: 0 auto;
+        width: 70px;
+        height: 70px;
     }
 }
 
@@ -295,6 +318,11 @@ img.right {
     width: 50px;
     height: 50px;
     float:left;
+
+    @include mobile {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .site-avatar img {
@@ -307,7 +335,7 @@ img.right {
   @include mobile {
     float: none;
     display: block;
-    margin: 0 auto;
+    margin: 15px auto;
   }
 }
 
@@ -317,21 +345,27 @@ img.right {
   cursor: pointer;
   font-family: $Martian;
   font-weight: 300;
-  font-size: 40px;
+  font-size: 24px;
   line-height: 1.4;
   text-decoration: none;
-  letter-spacing: -2px;
+  letter-spacing: -1px;
 
   @include mobile {
       margin: 0;
       text-align: center;
+      font-size: 18px;
   }
 }
 
 .masthead .site-name {
-    font-size: 24px;
-    margin: .4em 10px;
+    font-size: 18px;
+    margin: .7em 10px;
     float: left;
+
+    @include mobile {
+        font-size: 14px;
+        margin: .4em 10px;
+    }
 }
 
 .site-description {
@@ -341,8 +375,10 @@ img.right {
   margin: 2.7em 10px;
 
   @include mobile {
-    margin: 3px 0;
+    margin: 30px 0;
     text-align: center;
+    font-size: 14px;
+    line-height: 1.5em;
   }
 }
 
@@ -383,31 +419,49 @@ nav {
     padding: 60px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px 30px;
     align-items: stretch;
+
+    @include mobile {
+        padding: 15px;
+    }
 }
 
 .grid-container > header.post {
     width: 100%;
-    background: $lighterGray;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0.6965379901960784) 0%, rgba(255,255,255,0.5032606792717087) 100%);
     box-shadow: none;
     border: none;
-    padding: 0;
+    padding: 20px;
+    display: inline;
+    align-self: start;
 }
 
 .grid-container > .post {
     border-bottom: 1px solid $lightGray;
+    border-radius: 4px;
+    background: rgb(255,255,255);
+    background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8954175420168067) 100%);
 }
 
 .grid-container .title {
     font-size: 36px;
     margin: .25em 20px 3em;
+
+    @include mobile {
+        margin: .25em 15px 3em;
+    }
 }
 
 .grid-container .subtitle {
     font-size: 15px;
     margin: 1em 20px .25em;
+
+    @include mobile {
+        margin: 1em 15px .25em;
+    }
 }
 
 .grid-container img {
@@ -424,7 +478,7 @@ nav {
 }
 
 .post {
-    padding: 10px;
+    padding: 15px;
     max-width: 740px;
     margin: 0 auto;
     background: $white;
