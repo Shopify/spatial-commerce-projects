@@ -51,6 +51,34 @@
       </div>
     </div>
 
+    <div id="config-panel" style="position: fixed; top: 20px; right: 20px; min-width: 400px; max-width: 600px; background-color: #fff; padding: 20px;">
+      <input type="range" id="bkg-count" name="bkg-count" min="0" max="10000" value="2000" step="1" />
+      <label id="bkg-count-label" for="bkg-count"></label>
+      <br />
+      <input type="range" id="bkg-speed" name="bkg-speed" min="0" max="0.002" value="0.00025" step="0.00001" />
+      <label id="bkg-speed-label" for="bkg-speed"></label>
+      <br />
+      <input type="range" id="bkg-noise-scale" name="bkg-noise-scale" min="0" max="2" value="0.5" step="0.001" />
+      <label id="bkg-noise-scale-label" for="bkg-noise-scale"></label>
+      <br />
+      <input type="range" id="bkg-effect-strength" name="bkg-effect-strength" min="0" max="2" value="0.35" step="0.001" />
+      <label id="bkg-effect-strength-label" for="bkg-effect-strength"></label>
+      <br />
+      <input type="range" id="bkg-spacing" name="bkg-spacing" min="0" max="0.05" value="0.0125" step="0.0001" />
+      <label id="bkg-spacing-label" for="bkg-spacing"></label>
+      <br />
+      <input type="range" id="bkg-mouse-strength" name="bkg-mouse-strength" min="0" max="1" value="0.05" step="0.001" />
+      <label id="bkg-mouse-strength-label" for="bkg-mouse-strength"></label>
+      <br />
+      <input type="range" id="bkg-capsule-radius" name="bkg-capsule-radius" min="0" max="0.01" value="0.0025" step="0.0001" />
+      <label id="bkg-capsule-radius-label" for="bkg-capsule-radius"></label>
+      <br />
+      <input type="range" id="bkg-capsule-length" name="bkg-capsule-length" min="0" max="2" value="0.25" step="0.001" />
+      <label id="bkg-capsule-length-label" for="bkg-capsule-length"></label>
+      <br />
+      <input type="range" id="bkg-camera-z" name="bkg-camera-z" min="-1" max="1" value="0.27" step="0.01" />
+      <label id="bkg-camera-z-label" for="bkg-camera-z"></label>
+    </div>
     <script type="module" src="{{ site.baseurl }}/javascript/bkg.js"></script>
     {% include analytics.html %}
   </body>
