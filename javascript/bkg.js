@@ -10,6 +10,11 @@ const UP = new THREE.Vector3(0, 1, 0);
 
 class BackgroundCanvas {
   constructor(count) {
+    this.speed = 0.00025;
+    this.noiseScale = 0.5;
+    this.dampening = 0.35;
+    this.spacing = 0.0125;
+
     this.count = count;
     this.rowCount = Math.sqrt(this.count);
 
@@ -85,7 +90,9 @@ class BackgroundCanvas {
   }
 
   setupCamera() {
-    return new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.14, 0.5);
+    const cam = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.14, 0.5);
+    cam.position.z = 0.27;
+    return cam;
   }
 
   handleResize() {
@@ -106,22 +113,21 @@ class BackgroundCanvas {
     this.instanceOffset.copy(this.raycaster.ray.direction).multiplyScalar(0.05);
     this.instanceTarget.copy(this.raycaster.ray.origin).add(this.instanceOffset);
 
-    const speed = 0.00025;
-    const t = timestamp * speed;
-    const multiple = 0.5;
-    const dampening = 0.35;
+    const t = timestamp * this.speed;
+
+    const middleX = (this.rowCount * 0.5) * this.spacing;
+    const middleY = (this.rowCount * 0.5) * this.spacing;
 
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      this.instancePos.x = 0.25 - (px * 0.0125);
-      this.instancePos.y = 0.25 - (py * 0.0125);
-      this.instancePos.z = -0.27;
+      this.instancePos.x = (px * this.spacing) - middleX;
+      this.instancePos.y = (py * this.spacing) - middleY;
       this.instanceMouseMat.lookAt(this.instancePos, this.instanceTarget, UP);
-      this.instanceNoiseUV.set(px * multiple, t);
-      this.instanceEuler.x = (Math.PI * 0.5) + (cnoise(this.instanceNoiseUV) * dampening);
-      this.instanceNoiseUV.set(t, py * multiple);
-      this.instanceEuler.z = cnoise(this.instanceNoiseUV) * dampening;
+      this.instanceNoiseUV.set(px * this.noiseScale, t);
+      this.instanceEuler.x = (Math.PI * 0.5) + (cnoise(this.instanceNoiseUV) * this.dampening);
+      this.instanceNoiseUV.set(t, py * this.noiseScale);
+      this.instanceEuler.z = cnoise(this.instanceNoiseUV) * this.dampening;
       this.instanceRotMat.makeRotationFromEuler(this.instanceEuler);
       this.instanceMatrix
         .makeTranslation(this.instancePos.x, this.instancePos.y, this.instancePos.z)
