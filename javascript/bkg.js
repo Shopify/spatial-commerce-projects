@@ -10,12 +10,12 @@ const UP = new THREE.Vector3(0, 1, 0);
 
 class BackgroundCanvas {
   constructor(count) {
-    this.speed = 0.00025;
-    this.noiseScale = 0.5;
+    this.speed = 0.00012;
+    this.noiseScale = 0.224;
     this.effectStrength = 0.35;
     this.spacingX = 0.0125;
-    this.spacingY = 0.0125;
-    this.mouseStrength = 0.05;
+    this.spacingY = 0.02;
+    this.mouseStrength = 0.008;
 
     this.count = count;
 
@@ -45,7 +45,7 @@ class BackgroundCanvas {
     //this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
     //this.composer.addPass(this.bloomPass);
 
-    this.boxGeometry = new THREE.CapsuleGeometry(0.0025, 0.25, 10, 20);
+    this.boxGeometry = new THREE.CapsuleGeometry(0.005, 0.25, 10, 20);
     this.boxMaterial = new THREE.MeshDepthMaterial();
 
     this.directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
@@ -182,6 +182,7 @@ const updateCountLabel = () => {
   bkgCountLabel.textContent = 'Count ' + bkgCount.value;
 };
 updateCountLabel();
+bkgCount.value = bkg.count;
 
 bkgCount.addEventListener('input', () => {
   updateCountLabel();
@@ -197,6 +198,7 @@ const updateSpeedLabel = () => {
   bkgSpeedLabel.textContent = 'Speed ' + bkgSpeed.value;
 };
 updateSpeedLabel();
+bkgSpeed.value = bkg.speed;
 
 bkgSpeed.addEventListener('input', () => {
   updateSpeedLabel();
@@ -212,6 +214,7 @@ const updateNoiseScaleLabel = () => {
   bkgNoiseScaleLabel.textContent = 'Noise Scale ' + bkgNoiseScale.value;
 };
 updateNoiseScaleLabel();
+bkgNoiseScale.value = bkg.noiseScale;
 
 bkgNoiseScale.addEventListener('input', () => {
   updateNoiseScaleLabel();
@@ -227,6 +230,7 @@ const updateEffectStrengthLabel = () => {
   bkgEffectStrengthLabel.textContent = 'Effect Strength ' + bkgEffectStrength.value;
 };
 updateEffectStrengthLabel();
+bkgEffectStrength.value = bkg.effectStrength;
 
 bkgEffectStrength.addEventListener('input', () => {
   updateEffectStrengthLabel();
@@ -242,6 +246,7 @@ const updateSpacingXLabel = () => {
   bkgSpacingXLabel.textContent = 'Spacing X ' + bkgSpacingX.value;
 };
 updateSpacingXLabel();
+bkgSpacingX.value = bkg.spacingX;
 
 bkgSpacingX.addEventListener('input', () => {
   updateSpacingXLabel();
@@ -257,6 +262,7 @@ const updateSpacingYLabel = () => {
   bkgSpacingYLabel.textContent = 'Spacing Y ' + bkgSpacingY.value;
 };
 updateSpacingYLabel();
+bkgSpacingY.value = bkg.spacingY;
 
 bkgSpacingY.addEventListener('input', () => {
   updateSpacingYLabel();
@@ -272,6 +278,7 @@ const updateMouseStrengthLabel = () => {
   bkgMouseStrengthLabel.textContent = 'Mouse Strength ' + bkgMouseStrength.value;
 };
 updateMouseStrengthLabel();
+bkgMouseStrength.value = bkg.mouseStrength;
 
 bkgMouseStrength.addEventListener('input', () => {
   updateMouseStrengthLabel();
@@ -287,6 +294,7 @@ const updateCapsuleRadiusLabel = () => {
   bkgCapsuleRadiusLabel.textContent = 'Capsule Radius ' + bkgCapsuleRadius.value;
 };
 updateCapsuleRadiusLabel();
+bkgCapsuleRadius.value = bkg.boxGeometry.radius;
 
 bkgCapsuleRadius.addEventListener('input', () => {
   updateCapsuleRadiusLabel();
@@ -303,6 +311,7 @@ const updateCapsuleLengthLabel = () => {
   bkgCapsuleLengthLabel.textContent = 'Capsule Length ' + bkgCapsuleLength.value;
 };
 updateCapsuleLengthLabel();
+bkgCapsuleLength.value = bkg.boxGeometry.length;
 
 bkgCapsuleLength.addEventListener('input', () => {
   updateCapsuleLengthLabel();
@@ -319,6 +328,7 @@ const updateCameraZLabel = () => {
   bkgCameraZLabel.textContent = 'Camera Z ' + bkgCameraZ.value;
 };
 updateCameraZLabel();
+bkgCameraZ.value = bkg.camera.position.z;
 
 bkgCameraZ.addEventListener('input', () => {
   updateCameraZLabel();
