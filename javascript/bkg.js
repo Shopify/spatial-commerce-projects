@@ -274,7 +274,7 @@ updateCapsuleRadiusLabel();
 
 bkgCapsuleRadius.addEventListener('input', () => {
   updateCapsuleRadiusLabel();
-  bkg.boxGeometry = new THREE.CapsuleGeometry(parseFloat(bkgCapsuleRadius.value), bkg.boxGeometry.length, 10, 20);
+  bkg.boxGeometry = new THREE.CapsuleGeometry(parseFloat(bkgCapsuleRadius.value), parseFloat(bkgCapsuleLength.value), 10, 20);
   bkg.updateCount(bkg.count);
 });
 
@@ -290,7 +290,7 @@ updateCapsuleLengthLabel();
 
 bkgCapsuleLength.addEventListener('input', () => {
   updateCapsuleLengthLabel();
-  bkg.boxGeometry = new THREE.CapsuleGeometry(0.0025, parseFloat(bkgCapsuleLength.value), 10, 20);
+  bkg.boxGeometry = new THREE.CapsuleGeometry(parseFloat(bkgCapsuleRadius.value), parseFloat(bkgCapsuleLength.value), 10, 20);
   bkg.updateCount(bkg.count);
 });
 
