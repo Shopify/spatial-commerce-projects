@@ -60,7 +60,6 @@ class BackgroundCanvas {
     this.instanceOffset = new THREE.Vector3();
     this.instanceTarget = new THREE.Vector3();
     this.mesh = new THREE.InstancedMesh(this.boxGeometry, this.boxMaterial, this.count);
-    this.updateInstanceMatrices();
     this.scene.add(this.mesh);
 
     this.noiseTexture = null;
@@ -100,13 +99,13 @@ class BackgroundCanvas {
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
-  updateInstanceMatrices() {
+  updateInstanceMatrices(timestamp) {
     this.raycaster.setFromCamera(this.pointer, this.camera);
     this.instanceOffset.copy(this.raycaster.ray.direction).multiplyScalar(0.05);
     this.instanceTarget.copy(this.raycaster.ray.origin).add(this.instanceOffset);
 
     const speed = 0.00025;
-    const t = new Date().getTime() * speed;
+    const t = timestamp * speed;
     const multiple = 0.5;
     const dampening = 0.35;
 
@@ -129,9 +128,9 @@ class BackgroundCanvas {
     this.mesh.instanceMatrix.needsUpdate = true;
   }
 
-  animate() {
+  animate(timestamp) {
     requestAnimationFrame(this.animate);
-    this.updateInstanceMatrices();
+    this.updateInstanceMatrices(timestamp);
     this.camera.position.y = window.scrollY * -0.0001;
     this.composer.render();
   }
@@ -147,4 +146,4 @@ const bkg = new BackgroundCanvas(2000);
 window.addEventListener('resize', bkg.handleResize);
 window.addEventListener('mousemove', bkg.handleMouseMove);
 
-bkg.animate();
+requestAnimationFrame(bkg.animate);
