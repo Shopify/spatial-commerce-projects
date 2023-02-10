@@ -13,7 +13,8 @@ class BackgroundCanvas {
     this.speed = 0.00025;
     this.noiseScale = 0.5;
     this.effectStrength = 0.35;
-    this.spacing = 0.0125;
+    this.spacingX = 0.0125;
+    this.spacingY = 0.0125;
     this.mouseStrength = 0.05;
 
     this.count = count;
@@ -126,14 +127,14 @@ class BackgroundCanvas {
 
     const t = timestamp * this.speed;
 
-    const middleX = (this.rowCount * 0.5) * this.spacing;
-    const middleY = (this.rowCount * 0.5) * this.spacing;
+    const middleX = (this.rowCount * 0.5) * this.spacingX;
+    const middleY = (this.rowCount * 0.5) * this.spacingY;
 
     for (let i = 0; i < this.count; ++i) {
       const px = i % this.rowCount;
       const py = Math.floor(i / this.rowCount);
-      this.instancePos.x = (px * this.spacing) - middleX;
-      this.instancePos.y = (py * this.spacing) - middleY;
+      this.instancePos.x = (px * this.spacingX) - middleX;
+      this.instancePos.y = (py * this.spacingY) - middleY;
       this.instanceMouseMat.lookAt(this.instancePos, this.instanceTarget, UP);
       this.instanceNoiseUV.set(px * this.noiseScale, t);
       this.instanceEuler.x = (Math.PI * 0.5) + (cnoise(this.instanceNoiseUV) * this.effectStrength);
@@ -232,19 +233,34 @@ bkgEffectStrength.addEventListener('input', () => {
   bkg.effectStrength = parseFloat(bkgEffectStrength.value);
 });
 
-//////////////
-/// Spacing
-const bkgSpacing = document.getElementById('bkg-spacing');
-const bkgSpacingLabel = document.getElementById('bkg-spacing-label');
+///////////////
+/// SpacingX
+const bkgSpacingX = document.getElementById('bkg-spacing-x');
+const bkgSpacingXLabel = document.getElementById('bkg-spacing-x-label');
 
-const updateSpacingLabel = () => {
-  bkgSpacingLabel.textContent = 'Spacing ' + bkgSpacing.value;
+const updateSpacingXLabel = () => {
+  bkgSpacingXLabel.textContent = 'Spacing X ' + bkgSpacingX.value;
 };
-updateSpacingLabel();
+updateSpacingXLabel();
 
-bkgSpacing.addEventListener('input', () => {
-  updateSpacingLabel();
-  bkg.spacing = parseFloat(bkgSpacing.value);
+bkgSpacingX.addEventListener('input', () => {
+  updateSpacingXLabel();
+  bkg.spacingX = parseFloat(bkgSpacingX.value);
+});
+
+///////////////
+/// SpacingY
+const bkgSpacingY = document.getElementById('bkg-spacing-y');
+const bkgSpacingYLabel = document.getElementById('bkg-spacing-y-label');
+
+const updateSpacingYLabel = () => {
+  bkgSpacingYLabel.textContent = 'Spacing Y ' + bkgSpacingY.value;
+};
+updateSpacingYLabel();
+
+bkgSpacingY.addEventListener('input', () => {
+  updateSpacingYLabel();
+  bkg.spacingY = parseFloat(bkgSpacingY.value);
 });
 
 ////////////////////
