@@ -247,14 +247,10 @@ img.right {
 
     font-family: $DMSerif;
     color: $black;
-    line-height: 1.25;
+    line-height: 1.1;
     margin: 12px 0 48px 0;
     padding: 0;
     letter-spacing: -.02em;
-
-    @include mobile {
-        line-height: 1.4;
-    }
 }
 
 .subtitle {
@@ -318,12 +314,36 @@ img.right {
 .masthead .site-avatar img {
     width: 50px;
     height: 50px;
-    float:left;
+    float: left;
     margin: 0;
+    position: relative;
+    top: 2px;
 
     @include mobile {
         width: 30px;
         height: 30px;
+    }
+}
+
+.masthead .shopify-link {
+    float: right;
+    margin: 8px 0 0;
+
+    @include mobile {
+        margin-top:2px;
+    }
+}
+
+.shopify-link img.icon {
+    position: relative;
+    top: 2px;
+    width: 35px;
+    height: 35px;
+
+    @include mobile {
+        margin: 0 8px;
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -365,7 +385,7 @@ img.right {
 
     @include mobile {
         font-size: 14px;
-        margin: .4em 10px;
+        margin: .4em 6px .2em;
     }
 }
 
@@ -480,6 +500,27 @@ nav {
     object-fit: cover;
     width: 100%;
     height: 300px; 
+}
+
+.grid-container img.logo {
+    width: 82px;
+    height: 23px;
+    object-fit:contain;
+}
+
+a.shopify-link {
+    margin-left: 10px;
+    opacity: .7;
+
+    @include mobile {
+        text-align: center;
+        display: block;
+        margin-left:0;
+    }
+}
+
+a.shopify-link:hover {
+    opacity:1;
 }
 
 .grid-container .youtube-wrapper {
