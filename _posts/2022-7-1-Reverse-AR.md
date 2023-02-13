@@ -2,7 +2,7 @@
 layout: post
 title: What if you could bring your home shopping?
 subtitle: Reverse_AR
-image: /images/reverse_ar/Reverse AR - Prototype Montage 3.gif
+image: /images/reverse_ar/RPReplay_Final1659048716-BEST.gif
 ---
 
 {% include youtube.html id='4FmCO5k8D9I?modestbranding=1&amp;showinfo=0&amp;rel=0' %}

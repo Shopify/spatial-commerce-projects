@@ -5,8 +5,6 @@ subtitle: Spatial_Admin
 image: /images/spatial_admin/spatial_admin_concept_art.png
 ---
 
-![_config.yml]({{ site.baseurl }}/images/spatial_admin/spatial_admin_concept_art.png){:.centered}
-
 With Meta’s [Quest Pro](https://www.meta.com/ca/quest/quest-pro/) and other business-focused headsets arriving soon, we wondered what the world might look like for Shopify merchants in 3 to 5 years as productivity ecosystems develop.
 
 Virtual photography in particular is a powerful new tool. Using 3D rendering to create ideal images is growing in popularity, but designing 3D sets on 2D screens requires more tutorials and merchant training than simply giving them intuitive spatial tools to achieve their goals.
@@ -59,7 +57,7 @@ It turned out to be a pretty limiting pattern.
 
 The real reason to have a whole seemingly-redundant set of UI for the camera, lights, environment, model, etc. is that there is just so much of it. How do you fit it all into a tiny frame? Our example above rotates the shoe, and that worked great for already set up scenes that were basically done, but it offered very little creative control for building up scenes from scratch or giving any meaningful deeper choices or creative direction. You just couldn’t really interact with anything else.
 
-![_config.yml]({{ site.baseurl }}/images/spatial_admin/mini_photography_studio.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/spatial_admin/mini_photography_studio.png){:.right}
 
 There might still be something to this idea, where moving into the picture frame expands it into your whole view such that you sort of teleport into the photo entirely (and then get a whole new room-space studio view to work with) instead of reaching into a small shoebox of the frame, but that might have to be explored in a future project.
 
@@ -83,7 +81,7 @@ The dashboard also includes a 3D globe that shows orders in real time. The merch
 
 In front of the merchant is their Shopify admin page. They click on the customize button with their index finger, and that brings up a preview of their shoe store.
 
-![_config.yml]({{ site.baseurl }}/images/spatial_admin/piper_website.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/spatial_admin/piper_website.png){:.right}
 
 The merchant wants to improve the main image of the landing page, so they click on it and that brings up a tabletop virtual photography studio.
 

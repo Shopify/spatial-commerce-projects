@@ -2,18 +2,16 @@
 layout: post
 title: Could AR revolutionize retail store design?
 subtitle: Retail_Research_Kit
-image: /images/retail_research_kit/concept_art.png
+image: /images/retail_research_kit/shopify-retail-research-kit.gif
 ---
-
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/concept_art.png){:.centered}
 
 During the course of our last project, the [Meta Quest Pro](https://www.meta.com/ca/quest/quest-pro/) launched, which brought with it a new mix of capabilities that hasn't been brought together before: a portable VR headset, with hand and eye tracking, and color passthrough for mixed reality development. We wondered: what new use cases could this headset unlock for merchants?
 
 Looking at hand and eye tracking in particular, we thought - hey, those are the fundamental tools required to run user research studies in retail stores.
 
-User research studies analyze the behavior of customers as they walk through a store to determine which parts of the store receive the most attention, and which parts are ignored. They use eye tracking and other sources of data to help retailers optimize their physical spaces to better serve customers. You can think of them as [Hotjar](https://www.hotjar.com/) but in real life.
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/hotjar.jpg){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/hotjar.jpg){:.centered}
+User research studies analyze the behavior of customers as they walk through a store to determine which parts of the store receive the most attention, and which parts are ignored. They use eye tracking and other sources of data to help retailers optimize their physical spaces to better serve customers. You can think of them as [Hotjar](https://www.hotjar.com/) but in real life.
 
 If a small merchant wants to run user research studies in their store right now, they have many professional options available, but these studies can be expensive and time-consuming, and frankly they seem like a daunting undertaking.
 
@@ -47,7 +45,7 @@ To visualize the data we wrote scripts to read the saved transforms and play the
 
 If you watch the previous video carefully, you will notice that the hands occasionally look quite funny, like they do in the image below.
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/broken_hands.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/broken_hands.png){:.right}
 
 Later on we figured out how to combine the transforms of the joints correctly, and the hands started looking flawless.
 
@@ -87,9 +85,9 @@ At this stage of the project we explored many different ways of visualizing cust
 
 {% include youtube.html id='lOFN1m7v8tA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-- Marking the customer’s path through the store with spheres whose size and color depend on the time spent at each location.
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/inchworm.png){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/inchworm.png){:.centered}
+- Marking the customer’s path through the store with spheres whose size and color depend on the time spent at each location.
 
 In the end, however, we decided to focus on creating classic heatmaps, since they are easy to read and can pack a lot of detail.
 
@@ -117,7 +115,7 @@ And then the last step was porting the shader so that it would work in VR. We st
 
 Here’s what the texture of one of our office’s looked like after being painted with the gaze vector:
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/painted_office_texture.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/painted_office_texture.png){:.right}
 
 The last thing we did was implement a mode in the app that allowed merchants to overlay painted textures on top of their real stores in color passthrough. We thought this was a very engaging way of visualizing the data. Merchants could walk through their stores and approach hot spots to understand what products were drawing the most attention.
 
@@ -131,7 +129,7 @@ With all of this working, we were ready to give this idea a trial run. We offere
 
 Unfortunately our initial scans of the store failed. We tried different iOS and Android phones, but we kept getting the same errors. Paxton Gate was simply too large and too complex for Polycam.
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/polycam_error.jpg){:.centered}
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/polycam_error.jpg){:.right}
 
 We then decided to only scan three quarters of the store, which allowed us to get a 3D model that we could use in our app.
 
@@ -163,8 +161,8 @@ One can even imagine a future where merchants not only have 3D scans of their st
 
 {% include youtube.html id='czi0RMfSGS8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-That would unlock new insights like “what parts of this product draw the most attention?”
+![_config.yml]({{ site.baseurl }}/images/retail_research_kit/soap_dispenser.gif){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/retail_research_kit/soap_dispenser.gif){:.centered}
+That would unlock new insights like “what parts of this product draw the most attention?”
 
 For a merchant who's never had easy access to this type of technology, this is now a huge opportunity.

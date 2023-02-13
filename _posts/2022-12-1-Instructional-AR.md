@@ -2,7 +2,7 @@
 layout: post
 title: What might instruction manuals look like in the future?
 subtitle: Instructional_AR
-image: /images/instructional_ar/steps_1_2_3.png
+image: /images/instructional_ar/delight clip 01 crop.gif
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/instructional_ar/steps_1_2_3.png){:.right}
