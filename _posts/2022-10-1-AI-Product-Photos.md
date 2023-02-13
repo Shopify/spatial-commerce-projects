@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Could AI unlock unlimited product photography?
+title: Could AI unlock enhanced product photography?
 subtitle: AI_Product_Photography
-image: /images/ai_product_photos/shoe_overview.png
+image: /images/ai_product_photos/shoe expressive 2.png
 ---
-
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/shoe_overview.png){:.centered}
 
 Our team at Shopify usually focuses on spatial computing: AR, VR, and other forms of immersive media. However, we incorporated generative diffusion into our [AI Product Genie]({% post_url 2022-9-1-AI-Product-Genie %}) exploration, and during the course of that project we had the spark of an idea in the form of a ton of questions, and had developed the expertise to investigate and answer them.
 
@@ -27,17 +25,17 @@ First thing's first - we had to learn how to get the most out of Stable Diffusio
 
 However, this is when some of our initial optimism started to temper with some realism: we could fiddle with different sampling methods, different parameters for the model, and hew to our known good keywords; but to get good results, we found that you simply have to generate a lot of options.
 
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/prompt_fail.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/ai_product_photos/prompt_fail.png){:.right}
 
 ## Supercharged photo filters
 
 Moving on to the image generation branches of research, we had seen a fine-tuned [version](https://huggingface.co/justinpinkney/pokemon-stable-diffusion) of Stable Diffusion 1.4 that transformed input photos into cartoon character versions of themselves. They also wrote a great [explainer](https://github.com/LambdaLabsML/examples/tree/main/stable-diffusion-finetuning) talking about how they did it, with 6 hours of training and less than 1000 captured cartoon images.
 
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/cartoon.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/ai_product_photos/cartoon.png){:.right}
 
 We followed the same process they described: first, gathering a dataset of great professional-looking product photos, then running a [BLIP](https://arxiv.org/abs/2201.12086) caption model to provide labels for each product photo, and finally using that dataset to fine-tune on a powerful GPU for 15,000 steps. Unfortunately, the more training steps we applied, the more the model seemed to deconverge - ultimately at 20,000 steps, forgetting how to produce anything recognizable at all!
 
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/deconverge.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/ai_product_photos/deconverge.png){:.right}
 
 Given what we know from further research and investigations, we now know that our training set was too diverse, our learning rate was too high, our BLIP captions were insufficient, and Stable Diffusion 1.4 is now not the best starting point for fine-tuning an img2img model. However, in this exploration with each 15,000 step training run taking up most of a workday, this began to take a lot of time and we decided to shelve this avenue of exploration for now.
 
@@ -55,8 +53,8 @@ But we had also seen [Dreambooth](https://dreambooth.github.io/), a method publi
 
 # Conclusions
 
-We think there is an incredible opportunity here for every product to put its best foot forward. With better product photos, consumers can make clearer, more informed decisions. Merchants can better engage their audiences. It's still a work-in-progress: products with simple forms and organic lines work best today, while text, geometry, logos and counting are still out of reach:
+![_config.yml]({{ site.baseurl }}/images/ai_product_photos/text_fail.png){:.right}
 
-![_config.yml]({{ site.baseurl }}/images/ai_product_photos/text_fail.png){:.centered}
+We think there is an incredible opportunity here for every product to put its best foot forward. With better product photos, consumers can make clearer, more informed decisions. Merchants can better engage their audiences. It's still a work-in-progress: products with simple forms and organic lines work best today, while text, geometry, logos and counting are still out of reach:
 
 But the ultimate takeaway is this: yes, AI can unlock unlimited product photography!

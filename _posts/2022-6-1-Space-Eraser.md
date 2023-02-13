@@ -5,8 +5,6 @@ subtitle: Space_Eraser
 image: /images/space_eraser/space_eraser_popcorn.gif
 ---
 
-![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_popcorn.gif){:.centered}
-
 Augmented reality is useful when you're shopping for furniture, but all the stuff that’s already in your room kinda gets in the way of a good AR preview. Diminished reality techniques use AI to blend selected areas of an image with surrounding pixels—effectively cloaking individual objects—but there is still no easy way to reset your room.
 
 Apple recently announced a new API called [RoomPlan](https://developer.apple.com/augmented-reality/roomplan/) at WWDC. RoomPlan makes it easy to create a semantically labeled model of your room and “room-defining objects” using computer vision and LiDAR data.
@@ -21,19 +19,19 @@ We were excited to dig into this new API and wondered if we could leverage it to
 
 Space Eraser is a concept app that leverages Apple’s RoomPlan API to create a semantically labeled model of your room using your device’s LiDAR sensor. It maps your room in high fidelity, identifying room-defining objects, their size, position, and orientation.
 
-![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_scan.gif){:.centered}
+![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_scan.gif){:.right}
 
 Live pixel data is joined with LiDAR depth data in real time to texture object meshes. When the scanning process is complete these models are mapped 1:1 on top of your camera’s live video feed using augmented reality. This “digital twin” of your room would be interactive and editable. Now you can erase anything (or everything) and start fresh.
 
-![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_popcorn.gif){:.centered}
+![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_popcorn.gif){:.right}
 
 With an empty room, you could browse entire room sets quickly by swiping through curated collections from brands and influencers. The new furniture would arrange itself automatically, leveraging cues from the orientation of existing furniture and making it easy to try out completely different vibes quickly.
 
-![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_swipe.gif){:.centered}
+![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_swipe.gif){:.right}
 
 A digital twin of your room also makes it easy to edit specific items. Select your sofa and swipe through alternatives that take the aesthetic and spatial context into account. Machine learning can surface sizes, styles, and colors similar to the original sofa—or perhaps something that better matches the rest of the room.
 
-![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_couch_swap.gif){:.centered}
+![_config.yml]({{ site.baseurl }}/images/space_eraser/space_eraser_couch_swap.gif){:.right}
 
 In the near term this concept can be delivered through mobile AR, but it will only truly shine once more immersive AR headsets arrive, and it highlights that adding virtual things to a real room is just the first step. The ability to select and remove real objects from a scene brings us closer to a fully-editable reality.
 
