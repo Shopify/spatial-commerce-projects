@@ -7,12 +7,34 @@ import cnoise from './perlin.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
 
+function hexToVec(hex) {
+  const tmp = (hex + '').replace(/[^0-9a-fA-F]/g, '');
+  return [
+    parseInt(tmp.substring(0, 2), 16) / 255.0,
+    parseInt(tmp.substring(2, 4), 16) / 255.0,
+    parseInt(tmp.substring(4, 6), 16) / 255.0
+  ];
+}
+
+function vecToHex(vec) {
+  return (
+    '#' +
+    Math.abs(vec[0] * 255.0).toString(16).padStart(2, '0') +
+    Math.abs(vec[1] * 255.0).toString(16).padStart(2, '0') +
+    Math.abs(vec[2] * 255.0).toString(16).padStart(2, '0')
+  );
+}
+
+function isDarkMode() {
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+}
+
 const material = new THREE.ShaderMaterial({
   uniforms: {
     minDepth: { value: 0.0 },
     maxDepth: { value: 0.333 },
-    startColor: { value: [199 / 255.0, 203 / 255.0, 255 / 255.0] },
-    endColor: { value: [17 / 255.0, 17 / 255.0, 255 / 255.0] }
+    startColor: { value: hexToVec(isDarkMode() ? '#2A3A41' : '#9a9a9a') },
+    endColor: { value: hexToVec(isDarkMode() ? '#201A09' : '#FFFFFF') }
   },
   vertexShader: `
 uniform float minDepth;
@@ -67,7 +89,7 @@ class BackgroundCanvas {
     this.scene = new THREE.Scene();
 
     this.renderer = new THREE.WebGLRenderer();
-    this.renderer.setClearColor(0x000000, 1);
+    this.renderer.setClearColor(isDarkMode() ? 0x000000 : 0xFFFFFF, 1);
     this.elt = this.setupCanvasElement();
     this.handleResize();
 
@@ -195,24 +217,6 @@ requestAnimationFrame(bkg.animate);
 
 /////////////////////////////////
 ///////// CONFIG PANEL
-
-function hexToVec(hex) {
-  const tmp = (hex + '').replace(/[^0-9a-fA-F]/g, '');
-  return [
-    parseInt(tmp.substring(0, 2), 16) / 255.0,
-    parseInt(tmp.substring(2, 4), 16) / 255.0,
-    parseInt(tmp.substring(4, 6), 16) / 255.0
-  ];
-}
-
-function vecToHex(vec) {
-  return (
-    '#' +
-    Math.abs(vec[0] * 255.0).toString(16).padStart(2, '0') +
-    Math.abs(vec[1] * 255.0).toString(16).padStart(2, '0') +
-    Math.abs(vec[2] * 255.0).toString(16).padStart(2, '0')
-  );
-}
 
 ////////////
 /// Count
