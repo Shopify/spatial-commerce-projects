@@ -351,7 +351,7 @@ const bkgCapsuleLengthLabel = document.getElementById('bkg-capsule-length-label'
 const updateCapsuleLengthLabel = () => {
   bkgCapsuleLengthLabel.textContent = 'Capsule Length ' + bkgCapsuleLength.value;
 };
-bkgCapsuleLength.value = bkg.boxGeometry.length;
+bkgCapsuleLength.value = bkg.boxGeometry.parameters.height;
 updateCapsuleLengthLabel();
 
 bkgCapsuleLength.addEventListener('input', () => {
