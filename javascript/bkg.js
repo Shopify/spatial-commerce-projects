@@ -2,11 +2,45 @@ import * as THREE from 'three';
 
 import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
 import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
-import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
 
 import cnoise from './perlin.js';
 
 const UP = new THREE.Vector3(0, 1, 0);
+
+const material = new THREE.ShaderMaterial({
+  uniforms: {
+    minDepth: { value: 0.0 },
+    maxDepth: { value: 0.333 },
+    startColor: { value: [199 / 255.0, 203 / 255.0, 255 / 255.0] },
+    endColor: { value: [17 / 255.0, 17 / 255.0, 255 / 255.0] }
+  },
+  vertexShader: `
+uniform float minDepth;
+uniform float maxDepth;
+
+varying float depth;
+
+float mapLinear(float x, float a1, float a2, float b1, float b2) {
+	return b1 + (x - a1) * (b2 - b1) / (a2 - a1);
+}
+
+void main() {
+  vec4 camPos = vec4(cameraPosition, 1.0);
+  vec4 pos = instanceMatrix * modelMatrix * vec4(position, 1.0);
+  gl_Position = projectionMatrix * viewMatrix * pos;
+  depth = mapLinear(abs(camPos.z / camPos.w - pos.z / pos.w), minDepth, maxDepth, 0.0, 1.0);
+}`,
+  fragmentShader: `
+uniform vec3 startColor;
+uniform vec3 endColor;
+
+varying float depth;
+
+void main() {
+  gl_FragColor.rgb = mix(startColor, endColor, depth);
+  gl_FragColor.a = 1.0;
+}`
+});
 
 class BackgroundCanvas {
   constructor(count) {
@@ -37,16 +71,12 @@ class BackgroundCanvas {
     this.elt = this.setupCanvasElement();
     this.handleResize();
 
-    this.textureLoader = new THREE.TextureLoader();
-
     this.composer = new EffectComposer(this.renderer);
     this.renderPass = new RenderPass(this.scene, this.camera);
     this.composer.addPass(this.renderPass);
-    //this.bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.1, 0.4, 0.85);
-    //this.composer.addPass(this.bloomPass);
 
     this.boxGeometry = new THREE.CapsuleGeometry(0.005, 0.25, 10, 20);
-    this.boxMaterial = new THREE.MeshDepthMaterial();
+    this.boxMaterial = material;
 
     this.directionalLight = new THREE.DirectionalLight(0xffffff, 0.75);
     this.scene.add(this.directionalLight);
@@ -70,13 +100,6 @@ class BackgroundCanvas {
     this.instanceTarget = new THREE.Vector3();
     this.instanceEuler = new THREE.Euler();
     this.instanceNoiseUV = new THREE.Vector2();
-
-    this.noiseTexture = null;
-    this.textureLoader.load('textures/noise.png', (texture) => {
-      this.noiseTexture = texture;
-    }, undefined, (err) => {
-      console.log('Could not load noise texture');
-    })
   }
 
   updateCount(count) {
@@ -172,6 +195,24 @@ requestAnimationFrame(bkg.animate);
 
 /////////////////////////////////
 ///////// CONFIG PANEL
+
+function hexToVec(hex) {
+  const tmp = (hex + '').replace(/[^0-9a-fA-F]/g, '');
+  return [
+    parseInt(tmp.substring(0, 2), 16) / 255.0,
+    parseInt(tmp.substring(2, 4), 16) / 255.0,
+    parseInt(tmp.substring(4, 6), 16) / 255.0
+  ];
+}
+
+function vecToHex(vec) {
+  return (
+    '#' +
+    Math.abs(vec[0] * 255.0).toString(16).padStart(2, '0') +
+    Math.abs(vec[1] * 255.0).toString(16).padStart(2, '0') +
+    Math.abs(vec[2] * 255.0).toString(16).padStart(2, '0')
+  );
+}
 
 ////////////
 /// Count
@@ -333,4 +374,40 @@ updateCameraZLabel();
 bkgCameraZ.addEventListener('input', () => {
   updateCameraZLabel();
   bkg.camera.position.z = parseFloat(bkgCameraZ.value);
+});
+
+//////////////////
+/// Z Color Max
+const bkgZColorMax = document.getElementById('bkg-z-color-max');
+const bkgZColorMaxLabel = document.getElementById('bkg-z-color-max-label');
+
+const updateZColorMaxLabel = () => {
+  bkgZColorMaxLabel.textContent = 'Z Color Max ' + bkgZColorMax.value;
+};
+bkgZColorMax.value = bkg.boxMaterial.uniforms.maxDepth.value;
+updateZColorMaxLabel();
+
+bkgZColorMax.addEventListener('input', () => {
+  updateZColorMaxLabel();
+  bkg.boxMaterial.uniforms.maxDepth.value = parseFloat(bkgZColorMax.value);
+});
+
+////////////////////
+/// Z Color Start
+const bkgZColorStart = document.getElementById('bkg-z-color-start');
+
+bkgZColorStart.value = vecToHex(bkg.boxMaterial.uniforms.startColor.value);
+
+bkgZColorStart.addEventListener('input', () => {
+  bkg.boxMaterial.uniforms.startColor.value = hexToVec(bkgZColorStart.value);
+});
+
+///////////////////
+/// Z Color End
+const bkgZColorEnd = document.getElementById('bkg-z-color-end');
+
+bkgZColorEnd.value = vecToHex(bkg.boxMaterial.uniforms.endColor.value);
+
+bkgZColorEnd.addEventListener('input', () => {
+  bkg.boxMaterial.uniforms.endColor.value = hexToVec(bkgZColorEnd.value);
 });
