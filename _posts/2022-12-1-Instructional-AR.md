@@ -7,9 +7,9 @@ image: /images/instructional_ar/delight clip 01 crop.gif
 
 ![_config.yml]({{ site.baseurl }}/images/instructional_ar/steps_1_2_3.png){:.right}
 
-It’s surprising how much ambiguity is created when you take a 3D object and you compress it down into a 2D image. That ambiguity is the source of many mistakes during the assembly process. Mistakes like using the wrong screws to connect two pieces together, or connecting a piece with the incorrect face pointing outwards.
+It’s surprising how much ambiguity is created when you take a 3D object and you compress it down into a 2D image. That ambiguity is the source of many mistakes when you follow an instruction manual to assemble a product. Mistakes like using the wrong screws to connect two pieces together, or connecting a piece with the incorrect face pointing outwards.
 
-With the arrival of Meta’s Quest Pro headset, we wanted to reimagine the assembly process from the ground up to explore this future.
+With the arrival of Meta’s Quest Pro headset, we wanted to reimagine instruction manuals from the ground up to explore this future.
 
 Would seeing the assembly steps in 3D eliminate the ambiguity usually associated with instruction manuals? And would it be more comfortable than a paper booklet that you are constantly picking up and putting down? And could this technology scale for companies that need to produce instruction manuals for hundreds or thousands of products?
 

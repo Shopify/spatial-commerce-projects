@@ -35,7 +35,7 @@ The first thing we did was write an application that shows the world in color pa
 
 We decided to make this application fully unobtrusive by not including virtual hands or any hud elements. Our hope was to make the shopping experience as normal as possible for the research volunteers. They would still need to look at the world through a headset, but the headset would act as a simple pair of glasses, albeit a heavy and bulky pair.
 
-Using the [Oculus Movement SDK](https://developer.oculus.com/documentation/unity/move-overview/) we were able to record the transform of each eye individually, and using the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) we were able to record the 158 transforms that make up the joints of the hands.
+Using the [Oculus Movement SDK](https://developer.oculus.com/documentation/unity/move-overview/) we were able to record the transform of each eye individually, and using the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) we were able to record the 36 transforms that make up the joints of the hands.
 
 {% include youtube.html id='LD0-zcH-XOE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
