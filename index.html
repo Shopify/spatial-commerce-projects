@@ -6,7 +6,15 @@ layout: default
 <article class="post">
 
     <div class="stub-image">
+        {% if post.image != nil %}
         <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" /></a>
+        {% else %}
+        <a href="{{ site.baseurl }}{{ post.url }}">
+            <video autoplay muted loop>
+                <source src="{{ post.video }}" type="video/mp4" />
+            </video>
+        </a>
+        {% endif %}
     </div>
 
     <div class="subtitle">
