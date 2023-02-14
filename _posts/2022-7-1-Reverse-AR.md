@@ -2,7 +2,7 @@
 layout: post
 title: What if you could bring your home shopping?
 subtitle: Reverse_AR
-image: /images/reverse_ar/RPReplay_Final1659048716-BEST.gif
+video: https://cdn.shopify.com/videos/c/o/v/a129f61507b24631a40ba65350ecbcae.mp4
 ---
 
 {% include youtube.html id='4FmCO5k8D9I?modestbranding=1&amp;showinfo=0&amp;rel=0' %}

@@ -2,7 +2,7 @@
 layout: post
 title: Could AI make every shopper’s wish come true?
 subtitle: AI_Product_Genie
-image: /images/ai_product_genie/cobs_n_roses.gif
+video: https://cdn.shopify.com/videos/c/o/v/f6fa712eb59e477dbd20f66247e72887.mp4
 ---
 
 Stable Diffusion, a latent text-to-image diffusion model AI, was released in August, joining existing image models like MidJourney and Dall-E 2 in offering jaw-dropping image-making powers to even the most untrained of artists. Human creativity has always been the primary driver of commerce and these AI tools have unlocked enormous economic potential.

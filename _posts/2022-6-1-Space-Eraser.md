@@ -2,7 +2,7 @@
 layout: post
 title: What if your room had a reset button?
 subtitle: Space_Eraser
-image: /images/space_eraser/space_eraser_popcorn.gif
+video: https://cdn.shopify.com/videos/c/o/v/3bc293a3bf894f12b2d43bc8303e33be.mp4
 ---
 
 Augmented reality is useful when you're shopping for furniture, but all the stuff that’s already in your room kinda gets in the way of a good AR preview. Diminished reality techniques use AI to blend selected areas of an image with surrounding pixels—effectively cloaking individual objects—but there is still no easy way to reset your room.

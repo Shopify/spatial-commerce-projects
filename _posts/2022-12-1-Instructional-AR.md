@@ -2,7 +2,7 @@
 layout: post
 title: What might instruction manuals look like in the future?
 subtitle: Instructional_AR
-video: https://cdn.shopify.com/videos/c/o/v/4d27ea78346d4e49ae67ad5c56ee1fc0.mp4
+video: https://cdn.shopify.com/videos/c/o/v/3c4bd8c00aff4674b8c873f40e91dd6a.mp4
 ---
 
 ![_config.yml]({{ site.baseurl }}/images/instructional_ar/steps_1_2_3.png){:.right}

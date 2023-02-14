@@ -2,7 +2,7 @@
 layout: post
 title: Could AR revolutionize retail store design?
 subtitle: Retail_Research_Kit
-image: /images/retail_research_kit/shopify-retail-research-kit.gif
+video: https://cdn.shopify.com/videos/c/o/v/2936046e329f4937b17ea6d7b6589a23.mp4
 ---
 
 During the course of our last project, the [Meta Quest Pro](https://www.meta.com/ca/quest/quest-pro/) launched, which brought with it a new mix of capabilities that hasn't been brought together before: a portable VR headset, with hand and eye tracking, and color passthrough for mixed reality development. We wondered: what new use cases could this headset unlock for merchants?

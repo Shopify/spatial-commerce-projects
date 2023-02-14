@@ -2,7 +2,7 @@
 layout: post
 title: Could AR glasses let us install apps onto any object?
 subtitle: Product_As_Platform
-image: /images/product_as_platform/film_camera.gif
+video: https://cdn.shopify.com/videos/c/o/v/0fdd97e697fc41ada490a00af644acea.mp4
 ---
 
 After spending the last few months exploring what’s currently possible in the world of augmented reality with the latest hardware and software, we decided to pause for a moment to think about the future.
