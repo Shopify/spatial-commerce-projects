@@ -215,6 +215,7 @@ window.addEventListener('mousemove', bkg.handleMouseMove);
 
 requestAnimationFrame(bkg.animate);
 
+/*
 /////////////////////////////////
 ///////// CONFIG PANEL
 
@@ -415,3 +416,4 @@ bkgZColorEnd.value = vecToHex(bkg.boxMaterial.uniforms.endColor.value);
 bkgZColorEnd.addEventListener('input', () => {
   bkg.boxMaterial.uniforms.endColor.value = hexToVec(bkgZColorEnd.value);
 });
+*/
