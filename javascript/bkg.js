@@ -70,7 +70,7 @@ class BackgroundCanvas {
     this.noiseScale = 0.224;
     this.effectStrength = 0.35;
     this.spacingX = 0.0164;
-    this.spacingY = 0.02;
+    this.spacingY = 0.03;
     this.mouseStrength = 0.008;
 
     this.count = count;
