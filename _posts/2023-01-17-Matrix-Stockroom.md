@@ -25,6 +25,6 @@ The video below illustrates this concept and serves as our homage to the Matrix 
 
 {% include youtube.html id='DNzfp-M5jhQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-One cool thing to note: the hands you see in the video above were motion-captured using a Meta Quest headset and a tool we open sourced called [handy](https://github.com/Shopify/handy).
+One cool thing to note: the hands you see in the video above were motion-captured using a Meta Quest headset and a tool we open sourced called [handy]({{ site.baseurl }}{% link _posts/2023-01-16-Handy.md %}).
 
 Animating hands by hand (no pun intended) is horrendously complicated, so we hope this tool helps you if you ever want to add hands to a concept video or cutscene.
