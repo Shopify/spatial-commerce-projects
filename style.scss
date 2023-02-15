@@ -288,7 +288,6 @@ img.right {
 
 .container {
     background: $lighterGray;
-    border-bottom: 1px solid $lightGray;
 }
 
 .masthead {
@@ -479,7 +478,6 @@ nav {
 }
 
 .grid-container > .post {
-    border-bottom: 1px solid $lightGray;
     border-radius: 4px;
     background: rgb(255,255,255);
     background: linear-gradient(159deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.8954175420168067) 100%);
