@@ -10,7 +10,7 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.baseurl }}{{ post.image }}" /></a>
         {% else %}
         <a href="{{ site.baseurl }}{{ post.url }}">
-            <video autoplay muted loop>
+            <video autoplay muted loop playsinline>
                 <source src="{{ post.video }}" type="video/mp4" />
             </video>
         </a>
