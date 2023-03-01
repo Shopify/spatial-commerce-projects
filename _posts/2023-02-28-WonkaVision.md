@@ -192,12 +192,18 @@ In the beginning of this post we asked ourselves:
 
 After jumping through all the technical hurdles required to make it work, we believe it never took off because:
 
-- You need the intrinsic parameters of your webcam, which are difficult to calculate correctly.
+- You need special hardware or the intrinsic parameters of your webcam, which are difficult to calculate correctly.
 - You need the physical dimensions of your screen, which can’t be queried even in modern web browsers.
 - You need to close one eye to go from "fun effect" to "stunning optical illusion."
 
-Sadly, the technique is simply not portable. We have it running in the browser as a website, but it only works with one particular screen and one particular webcam.
+Sadly, Johnny's technique is simply not easily portable. We have it running in the browser as a website, but it only works with one particular screen and one particular webcam.
 
 Unless it becomes possible to easily get the intrinsic parameters of any webcam, and the physical dimensions of any screen, this wonderful optical illusion will never go mainstream.
 
 And even if all that becomes possible, will users be willing to close one eye to enjoy immersive experiences? That’s a question we can’t answer.
+
+Despite our failure to ship this to a massive audience, we still think it's important to take a step back and marvel at what's currently possible in modern web browsers. Thanks to WebAssembly we can now load and run complex machine learning models by just clicking on a link. We can track eyes, faces, hands and so much more. We can even render beautiful scenes at smooth frame rates.
+
+Maybe we can't bring the magic of XR to people who don't own headsets with Johnny's technique, but there are so many other avenues left to explore.
+
+It's hard not to be excited about the future of the web right now.
