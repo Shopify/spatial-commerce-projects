@@ -2,7 +2,7 @@
 layout: post
 title: Could eye tracking make the web more immersive?
 subtitle: WonkaVision
-video: https://cdn.shopify.com/videos/c/o/v/e311df9481f842dbb1cded74ae256e7b.mp4
+video: https://cdn.shopify.com/videos/c/o/v/6656dd041cc64c6ab762a095923608e3.mp4
 ---
 
 In the history of mind-blowing tech demos there is one that stands out, and that is Johnny Lee’s Wii Remote hack to create VR displays:
