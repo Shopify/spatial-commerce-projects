@@ -189,6 +189,8 @@ We decided to use Teenage Engineering’s [OP-1 field](https://teenage.engineeri
 
 It’s unbelievable how much it feels like the OP-1 field is floating out of the screen. It’s almost as if you could reach out and grab it.
 
+That feeling of "reach out and grab it" is the reason why we started referring to this project internally as WonkaVision, as a homage to [this](https://www.youtube.com/watch?v=pvS3j8VtanM&ab_channel=Movieclips) famous scene from the original Willy Wonka & the Chocolate Factory movie in which Charlie reaches into a TV screen and pulls out a chocolate bar.
+
 # Conclusions
 
 In the beginning of this post we asked ourselves:
