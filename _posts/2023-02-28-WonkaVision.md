@@ -154,9 +154,14 @@ If you are interested in learning more about off-axis perspective projections, [
 
 This is an important limitation of this technique that a lot of people don’t know about: for the optical illusion to work, you must place the virtual camera at the position of one of your eyes and close the other one. Otherwise, things don’t pop out of the screen or have the same feeling of depth.
 
-Note that you could place the virtual camera at the position of the left eye if you wanted. We have used the right eye throughout this post to keep the explanations short.
+To understand why that's the case, think about how VR headsets work:
 
-The small offset between your eyes and the midpoint between them is enough to make the optical illusion vanish, which is why we don’t place the virtual camera at the midpoint between the eyes.
+- They render the scene twice, once for each eye.
+- They present the separate renders to their corresponding eyes on separate screens.
+
+In our case, we only have one screen, so we need to choose one eye and render things from its perspective.
+
+Placing the virtual camera at the midpoint between the eyes causes things to not look quite right for either eye, and this makes the optical illusion vanish.
 
 Note, however, that it’s still a really fun effect if you use the midpoint between the eyes and keep both eyes open. It just doesn’t pop the same way.
 
