@@ -27,7 +27,7 @@ That was enough to get us excited, so we got to work on solving this problem.
 
 ## 3D eye tracking with a webcam
 
-The first thing that Johnny Lee’s technique requires is a way to calculate where your eyes are in world space with respect to the camera. In other words, we needed a way to accurately say things like “your right eye is 20 centimeters to the right of the camera, 10 centimeters above it, and 50 centimeters in front of it.”
+The first thing that Johnny Lee’s technique requires is a way to calculate where your eyes are in world space with respect to the camera. In other words, you need a way to accurately say things like “your right eye is 20 centimeters to the right of the camera, 10 centimeters above it, and 50 centimeters in front of it.”
 
 In Johnny’s case, he used the Wii Remote’s infrared camera and the LEDs on the Wii’s Sensor Bar to accurately determine the position of his head. In our case, we wanted to do the same but with a simple webcam.
 
@@ -150,17 +150,17 @@ This is precisely the effect we are after. What we see changes based on our view
 
 If you are interested in learning more about off-axis perspective projections, [this](http://160592857366.free.fr/joe/ebooks/ShareData/Generalized%20Perspective%20Projection.pdf) paper explains them better than we ever could.
 
-## Why are you placing the virtual camera at the position of the right eye? Why not the midpoint between the eyes?
+## Why are you placing the virtual camera at the position of the right eye? Why not place it at the midpoint between the eyes?
 
 This is an important limitation of this technique that a lot of people don’t know about: for the optical illusion to work, you must place the virtual camera at the position of one of your eyes and close the other one. Otherwise, things don’t pop out of the screen or have the same feeling of depth.
 
 Note that you could place the virtual camera at the position of the left eye if you wanted. We have used the right eye throughout this post to keep the explanations short.
 
-The small offset between your eyes and the midpoint between them is enough to make the optical illusion vanish, which is why we don’t place the virtual camera at the position of the midpoint between the eyes.
+The small offset between your eyes and the midpoint between them is enough to make the optical illusion vanish, which is why we don’t place the virtual camera at the midpoint between the eyes.
 
 Note, however, that it’s still a really fun effect if you use the midpoint between the eyes and keep both eyes open. It just doesn’t pop the same way.
 
-## Final prototype
+# Final prototype
 
 In the end we achieved our goal of implementing Johnny Lee’s technique in the browser using only a webcam.
 
@@ -180,22 +180,24 @@ Finally, we implemented the virtual storefront demo that we proposed in the begi
 
 {% include youtube.html id='7ZIyfPIEgkU?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
 
-We decided to use Teenage Engineering’s [OP-1 Field](https://teenage.engineering/products/op-1) for this demo because it’s such a cool product.
+We decided to use Teenage Engineering’s [OP-1 field](https://teenage.engineering/products/op-1) for this demo because it’s such a cool product.
 
-It’s unbelievable how much it feels like the OP-1 is floating out of the screen. It’s almost as if you could reach out and grab it.
+It’s unbelievable how much it feels like the OP-1 field is floating out of the screen. It’s almost as if you could reach out and grab it.
 
 # Conclusions
 
-In the beginning of this post we asked ourselves: why did Johnny Lee’s technique never take off? why wasn’t it implemented everywhere if everyone loved it?
+In the beginning of this post we asked ourselves:
+
+> Why did Johnny Lee’s technique never take off? Why wasn’t it implemented everywhere if everyone loved it?
 
 After jumping through all the technical hurdles required to make it work, we believe it never took off because:
 
 - You need the intrinsic parameters of your webcam, which are difficult to calculate correctly.
-- You need the physical dimensions of your screen, which can’t be queried in modern web browsers.
-- You need to close one eye for the optical illusion to go from fun to stunning.
+- You need the physical dimensions of your screen, which can’t be queried even in modern web browsers.
+- You need to close one eye to go from "fun effect" to "stunning optical illusion."
 
 Sadly, the technique is simply not portable. We have it running in the browser as a website, but it only works with one particular screen and one particular webcam.
 
 Unless it becomes possible to easily get the intrinsic parameters of any webcam, and the physical dimensions of any screen, this wonderful optical illusion will never go mainstream.
 
-And even if all that becomes possible, will users be willing to close one eye to enjoy immersive experiences? That’s a question we can’t answer either.
+And even if all that becomes possible, will users be willing to close one eye to enjoy immersive experiences? That’s a question we can’t answer.
