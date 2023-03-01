@@ -150,7 +150,7 @@ This is precisely the effect we are after. What we see changes based on our view
 
 If you are interested in learning more about off-axis perspective projections, [this](http://160592857366.free.fr/joe/ebooks/ShareData/Generalized%20Perspective%20Projection.pdf) paper explains them better than we ever could.
 
-## Why are you placing the virtual camera at the position of the right eye? Why not place it at the midpoint between the eyes?
+## Why are you placing the virtual camera at the position of the right eye or the left eye? Why not place it at the midpoint between the eyes?
 
 This is an important limitation of this technique that a lot of people don’t know about: for the optical illusion to work, you must place the virtual camera at the position of one of your eyes and close the other one. Otherwise, things don’t pop out of the screen or have the same feeling of depth.
 
