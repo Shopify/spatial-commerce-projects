@@ -37,11 +37,11 @@ We decided to make this application fully unobtrusive by not including virtual h
 
 Using the [Oculus Movement SDK](https://developer.oculus.com/documentation/unity/move-overview/) we were able to record the transform of each eye individually, and using the [Oculus Interaction SDK](https://developer.oculus.com/documentation/unity/unity-isdk-interaction-sdk-overview/) we were able to record the 36 transforms that make up the joints of the hands.
 
-{% include youtube.html id='LD0-zcH-XOE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/c4ec9d9a74604eca938225e298dda432.mp4' width='100%' %}
 
 To visualize the data we wrote scripts to read the saved transforms and play them in the Unity editor, and to convert them into an Alembic file so that they could also be played in Blender.
 
-{% include youtube.html id='6w39aIFWjX8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/64d13c15a8274392b1de8620b0cc00f9.mp4' width='100%' %}
 
 If you watch the previous video carefully, you will notice that the hands occasionally look quite funny, like they do in the image below.
 
@@ -57,7 +57,7 @@ Now we needed to figure out how to capture the position and orientation of the s
 
 To accomplish this we added an initial step to our app: we would load a pre-scanned 3D model of the store, and we would drag it into alignment with the real store using one of the Quest Pro’s controllers.
 
-{% include youtube.html id='gDK9Po6ReVg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/40f4563f36614cddadee9a696c0a4dba.mp4' width='100%' %}
 
 During the alignment step we made the model transparent so that it could be easily lined up with the world, and once this step was completed, we made it invisible so that it wouldn’t affect the shopping experience.
 
@@ -71,19 +71,19 @@ At this stage of the project we explored many different ways of visualizing cust
 
 - Marking what the customer is currently looking at with concentric circles, and marking their path through the store with a trail of bubbles.
 
-{% include youtube.html id='jBOoV-Xa2s8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/a14d191f545b4b3c963de0eb3d212380.mp4' width='100%' %}
 
 - Marking the things that the customer looks at with spheres.
 
-{% include youtube.html id='ew5fvuKYF_8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/eec36997536844498a18299f2f0f554d.mp4' width='100%' %}
 
 - Starting with a white store, and marking the things that the customer looks at by revealing their colors.
 
-{% include youtube.html id='1MEAkV7W6xE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/f5549cd3a44b4111836d52fa850cebe8.mp4' width='100%' %}
 
 - Marking the customer’s path through the store with flattened leaves of grass.
 
-{% include youtube.html id='lOFN1m7v8tA?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/d9edf6db87b64bb69633bab0ff838d6f.mp4' width='100%' %}
 
 ![_config.yml]({{ site.baseurl }}/images/retail_research_kit/inchworm.png){:.right}
 
@@ -93,7 +93,7 @@ In the end, however, we decided to focus on creating classic heatmaps, since the
 
 We started by implementing a technique called [Mesh Texture Painting](https://shahriyarshahrabi.medium.com/mesh-texture-painting-in-unity-using-shaders-8eb7fc31221c) to paint 3D models using the mouse.
 
-{% include youtube.html id='mOQju9vGnGg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/714a7b0fb02d464ca0edfabb0dcc2922.mp4' width='100%' %}
 
 That technique saves whatever you draw in a texture. In the case of the train above, for example, this is what its texture looks like before and after being painted:
 
@@ -107,11 +107,11 @@ If you would like to play with the train mesh texture painting demo, it’s live
 
 Once we had the mesh texture painting shader working, we modified it to draw different colormaps like [Turbo](https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html). Now the colors you painted would change depending on how long you held the mouse at the same place, and they would attenuate nicely too.
 
-{% include youtube.html id='SpKPG38Akb0?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/3a4224a54a18429485b99efaf153fa28.mp4' width='100%' %}
 
 And then the last step was porting the shader so that it would work in VR. We started by replacing the mouse with a Quest Pro controller, and then we replaced the Quest Pro controller with the gaze vector. It’s an amazing feeling to paint with your eyes. You feel like Marvel’s Cyclops while doing it.
 
-{% include youtube.html id='Rt7DRhWjbIQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/53d038ae21304093b11476ed208c188c.mp4' width='100%' %}
 
 Here’s what the texture of one of our office’s looked like after being painted with the gaze vector:
 
@@ -119,7 +119,7 @@ Here’s what the texture of one of our office’s looked like after being paint
 
 The last thing we did was implement a mode in the app that allowed merchants to overlay painted textures on top of their real stores in color passthrough. We thought this was a very engaging way of visualizing the data. Merchants could walk through their stores and approach hot spots to understand what products were drawing the most attention.
 
-{% include youtube.html id='Qp5HEbcietg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/5b0d91c90262452490165f2d6d2aa096.mp4' width='100%' %}
 
 Decoupling the process of analysis from the process of capture worked great for this project. We could use the results that were taken yesterday to gain further insights today. And when we had a new idea about how to better visualize the data, we could go back and use existing data to validate and check our insights.
 
@@ -139,17 +139,17 @@ Even with all those problems, we were able to successfully capture a few volunte
 
 Here’s an actual volunteer walking through Paxton Gate:
 
-{% include youtube.html id='Xd6l-ksdwXM?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/7bbf04429dc74965afbd6ce47499f38e.mp4' width='100%' %}
 
 Everything you see in that video was mocapped, and the heatmap on the walls is the result of combining the walkthrough data of multiple volunteers.
 
 Here’s another volunteer browsing through some water bottles and cards:
 
-{% include youtube.html id='H_v1O9XFLHQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/f79f96b3c7bf4873ac1d97608b01ad30.mp4' width='100%' %}
 
 And here’s the combined heatmap overlaid on top of the real Paxton Gate in color passthrough:
 
-{% include youtube.html id='fvl4vsmWDtQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/e30f99b404af4945a62bae64a5dc36f0.mp4' width='100%' %}
 
 The different ways one can visualize the data are truly endless.
 
@@ -159,7 +159,7 @@ When everything is working, this is a valuable and magical tool for merchants. I
 
 One can even imagine a future where merchants not only have 3D scans of their stores, but of every single product within them, which would allow this tool to keep track of all the products that a customer interacts with with great precision.
 
-{% include youtube.html id='czi0RMfSGS8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/f3121ea5150f4501883088c130aabf2d.mp4' width='100%' %}
 
 ![_config.yml]({{ site.baseurl }}/images/retail_research_kit/soap_dispenser.gif){:.right}
 
