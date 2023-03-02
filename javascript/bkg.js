@@ -33,7 +33,7 @@ const material = new THREE.ShaderMaterial({
   uniforms: {
     minDepth: { value: 0.0 },
     maxDepth: { value: 0.333 },
-    startColor: { value: hexToVec(isDarkMode() ? '#2A3A41' : '#9a9a9a') },
+    startColor: { value: hexToVec(isDarkMode() ? '#2A3A41' : '#EEEEEF') },
     endColor: { value: hexToVec(isDarkMode() ? '#201A09' : '#FFFFFF') }
   },
   vertexShader: `
