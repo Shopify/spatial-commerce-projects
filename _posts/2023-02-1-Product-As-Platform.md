@@ -25,7 +25,7 @@ Once we had hit upon this idea, we decided to explore it by producing concept vi
 
 # Pentax Film Camera
 
-{% include youtube.html id='KU7nMidxHoo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/8a76d38331a947e1b77b24cc34101ee7.mp4' width='100%' %}
 
 In this example, the user summons an app that they installed on a 50 year old analog camera. The app tells them what type of film is loaded in the camera, how many shots they have left, and when they took their first exposure.
 
@@ -35,7 +35,7 @@ The most important thing to note here is that useful information is being provid
 
 # SodaStream Sparkling Water Maker
 
-{% include youtube.html id='d05WNllEFyg?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/616c34eb7239480398956913d1add111.mp4' width='100%' %}
 
 In this example, the AR glasses detect that the user is interacting with a SodaStream machine, and automatically display a pressure widget to make it easier to use, along with a notification about the arrival of a replacement CO2 bottle.
 
@@ -43,7 +43,7 @@ We believe strongly in the idea that the AR glasses should only display informat
 
 # Guitar
 
-{% include youtube.html id='C9sgJNMR8W8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/e46b524773d044379771c51dd5a72974.mp4' width='100%' %}
 
 In this example, the user tunes their guitar using an app that they installed on it.
 
@@ -53,7 +53,7 @@ Another aspect of this idea that we found really exciting is that the apps that 
 
 # Allbirds Running Shoes
 
-{% include youtube.html id='EFC0DMJwLVI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/782a4ffdfa9d4316852be12dbd14ba03.mp4' width='100%' %}
 
 In this example, the user summons the Allbirds running app after their shoes are identified by their AR glasses. The app shows them stats, what their friends have been up to, and tracks their run.
 
@@ -61,7 +61,7 @@ This is what buying an augmented product could look like. Your Allbirds would st
 
 # Click & Grow Indoor Smart Garden
 
-{% include youtube.html id='9CTYRX0oje0?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/3407c114378543b59038d08296c83d56.mp4' width='100%' %}
 
 In this example, the user summons the user interface of their Click & Grow indoor smart garden. The UI tells them when their plants are ready to be harvested, and it allows them to select the next pods they would like to receive through the mail.
 
