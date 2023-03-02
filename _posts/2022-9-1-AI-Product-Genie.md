@@ -15,7 +15,7 @@ We wanted to take this idea a step further to see if we could conjure a genie!
 
 # Wallpaper Genie
 
-{% include youtube.html id='tmXZYJQZcgo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/a2f5a79dd65d411da84546c75defc2c3.mp4' width='100%' %}
 
 Wallpaper Genie makes it easy to conjure and buy any wallcovering you can imagine. Open the app and ask for something specific. Genie will conjure it right onto your walls in real time with AR.
 
@@ -64,7 +64,7 @@ And then to round it out, the most basic ever UI mockup for the sales page.
 
 With this pipeline already built and proven, it was a quick jump to apply it to other mediums, which is why we decided to explore the same concept again but this time with a t-shirt.
 
-{% include youtube.html id='jiTTZrjR1E4?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/115890792ff942849afd582f761963a1.mp4' width='50%' %}
 
 # How we made it
 
