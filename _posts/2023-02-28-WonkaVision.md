@@ -67,15 +67,15 @@ The only problem then became how to calculate the intrinsic parameters of our we
 
 - Then you take around 50 photos of it at different angles using your webcam.
 
-{% include youtube.html id='E0--Im-2G70?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/08f5fa86949d48658f6931bcdf54ea03.mp4' width='100%' %}
 
 - Finally, you feed the photos to a Python script that uses OpenCV to detect the corners of the checkerboard pattern, which then allows it to calculate the intrinsic parameters of your webcam.
 
-{% include youtube.html id='Qz8toEz_kgY?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/eb0747c656694154901f677b3ae4c037.mp4' width='100%' %}
 
 Here you can see the eye tracking in action, with the world space positions of the eyes being displayed in the top left corner:
 
-{% include youtube.html id='xooxSDKjXq0?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/dd5f8061fc744970b9c1e06fe9ee2c51.mp4' width='100%' %}
 
 To validate that the depth values we were computing were correct we used MediaPipe’s DIY approach of taping a stick to a pair of glasses and then sliding our eyes along a big ruler towards the webcam:
 
@@ -130,21 +130,21 @@ There is only one major gotcha left to talk about, and that is the difference be
 
 If our virtual camera used a normal perspective projection (also known as an on-axis perspective projection), this is what the view frustum would look like:
 
-{% include youtube.html id='YhBTMMRHE00?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/5fe6c516b5ef435a8ac9bd32861a794f.mp4' width='100%' %}
 
 As you can see, it’s a symmetric pyramid whose shape never changes. This is problematic because with this type of perspective projection, this is what we see on the computer screen when we move our head around:
 
-{% include youtube.html id='SapTisKEkYk?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/9e1b01897b5f492294dab9ab5df36996.mp4' width='100%' %}
 
 As you can see, we are able to see beyond the edges of our window, and that’s not what we want at all.
 
 Now take a look at what our camera’s view frustum would look like if we used an off-axis perspective projection matrix:
 
-{% include youtube.html id='RISisybgfvw?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/548200ac5f8249bb941df0abf17e59cf.mp4' width='100%' %}
 
 As you can see, it’s an asymmetric pyramid whose base is glued to the virtual window. Now this is what we see on the computer screen when we move our head around:
 
-{% include youtube.html id='08-qhLZXw4s?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/408de1b67f134a95908382e1cfbb11be.mp4' width='100%' %}
 
 This is precisely the effect we are after. What we see changes based on our viewing angle and distance, but we never see beyond the edges of the virtual window.
 
@@ -171,19 +171,19 @@ In the end we achieved our goal of implementing Johnny Lee’s technique in the 
 
 Here you can see our version of Johnny’s famous targets demo:
 
-{% include youtube.html id='zJrxWUQnnBc?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/67f1ee765fc34e5ab95fe17ecdfc788a.mp4' width='100%' %}
 
 To record that video we held an IPad with the camera pressed as closely as possible to our right eye. It’s amazing how much the targets appear to pop out of the screen.
 
 We also implemented a demo that’s more focused on showcasing depth and camera movement. You can see it there:
 
-{% include youtube.html id='N0MgTurkkXo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/6aae45a989e24c76a22cadf14a8fd453.mp4' width='100%' %}
 
 We thought it would be funny to have the zombie try to break out of the screen and get angry when he couldn’t. Imagine all the things that could be done with this technique in video games!
 
 Finally, we implemented the virtual storefront demo that we proposed in the beginning of this post. You can see it here:
 
-{% include youtube.html id='7ZIyfPIEgkU?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/aae83891a87549a98be06329d695acf6.mp4' width='100%' %}
 
 We decided to use Teenage Engineering’s [OP-1 field](https://teenage.engineering/products/op-1) for this demo because it’s such a cool product.
 
