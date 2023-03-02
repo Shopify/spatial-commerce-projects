@@ -23,7 +23,7 @@ We see this combination of spatial search results and voice commands as one poss
 
 The video below illustrates this concept and serves as our homage to the Matrix ❤️.
 
-{% include youtube.html id='DNzfp-M5jhQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/ad18e5e289cc42beb4c8fdb053fec02a.mp4' width='100%' %}
 
 One cool thing to note: the hands you see in the video above were motion-captured using a Meta Quest headset and a tool we open sourced called [handy]({{ site.baseurl }}{% link _posts/2023-01-16-Handy.md %}).
 
