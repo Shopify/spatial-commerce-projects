@@ -13,7 +13,7 @@ With the arrival of Meta’s Quest Pro headset, we wanted to reimagine instructi
 
 Would seeing the assembly steps in 3D eliminate the ambiguity usually associated with instruction manuals? And would it be more comfortable than a paper booklet that you are constantly picking up and putting down? And could this technology scale for companies that need to produce instruction manuals for hundreds or thousands of products?
 
-{% include youtube.html id='hGQofWT2-z8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/2bf4a60af13348948a50d1bece8afadb.mp4' width='100%' %}
 
 # Exploration
 
@@ -29,8 +29,6 @@ After considering a few different options, we decided to go with a toy kitchen m
 
 The instruction manual of the toy kitchen teaches you how to put it together in 17 steps, and the kitchen itself consists of 20 unique pieces that are connected together using 10 screws and 10 bolts. We felt that this product had the perfect amount of complexity to test our AR concept.
 
-
-
 If our technology couldn’t teach you how to assemble a toy kitchen, then it definitely didn’t have legs for anything else.
 
 ## Object tracking
@@ -41,7 +39,7 @@ The first half of that sentence is what worried us the most. How would we highli
 
 Our solution to this problem ended up being beautifully simple. While discussing how each of us usually assembles furniture, we realized that most of us like to lay out all the pieces on the floor before starting to put them together. So then we thought: what if the AR instruction manual told you how to lay out the pieces? Once you completed that step, the system would know exactly where everything is, so it could tell you where to grab things!
 
-{% include youtube.html id='SMrk0SaoOuk?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/19ac76d4144e4f59901af9b7626f5249.mp4' width='100%' %}
 
 It turns out there’s a word for the process of laying things like that. It’s called knolling.
 
@@ -51,28 +49,29 @@ With the object tracking problem solved, now came the fun part: how would we gui
 
 We explored many different ideas and interaction patterns during this phase. Here are the most interesting ones:
 
-- We thought it would be fun to have an animated helper that keeps track of your hands and alerts you when you grab an incorrect piece. The alert can take the form of a speech bubble, an audio clip or just a nod of the character’s head. It’s surprising how expressive an animation by itself can be. 
-{% include youtube.html id='_Zv1IxLZY8M?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+- We thought it would be fun to have an animated helper that keeps track of your hands and alerts you when you grab an incorrect piece. The alert can take the form of a speech bubble, an audio clip or just a nod of the character’s head. It’s surprising how expressive an animation by itself can be.
+
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/ad06053c7fee405dba450d586bba46b7.mp4' width='100%' %}
 
 - We implemented ghost pieces that travel from their knolled positions to their final positions on a reference model of what you are assembling. This ended up being our most commonly used pattern. It’s simple and effective at telling you what to do.
 
-{% include youtube.html id='V5XeUwdvHMI?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/599d4a2c254f49c2ac237317f4ccc1bd.mp4' width='100%' %}
 
 - We color-coded the screws, bolts and tools to make it easy to recognize which ones to use at each step. We also displayed flowing dashed lines at the places where the screws and bolts needed to be inserted. Seeing those lines in 3D felt so much clearer than seeing them in a 2D diagram.
 
-{% include youtube.html id='C0KNmCOpmnQ?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/62538debce704e7f8d63b9c6cebb302b.mp4' width='100%' %}
 
 - We played with fun wobbly lines that guide your hands to the places where you need to connect things together. These were particularly delightful.
 
-{% include youtube.html id='J81KuLbOneo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/9c854aeabc7b42559368600553f2d4e3.mp4' width='100%' %}
 
 - We duct-taped the Quest Pro’s controllers to parent virtual objects to physical objects. This led to beautiful interactions like being able to move a virtual wireframe model of the toy kitchen along with the real toy kitchen.
 
-{% include youtube.html id='HTLwxL8lWbE?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/65ccd0b16f264ccfa7a7bd11a8f5949a.mp4' width='100%' %}
 
 - We used the Quest Pro’s microphone to notify the system when you are ready for the next step. We explored recognizing hand gestures like a thumbs-up for this purpose, but we found that that led to lots of false positives as you worked with the pieces.
 
-{% include youtube.html id='XzaWY6YBou4?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/0832e3f0b6ff4e2b90c9b16bbe89f30a.mp4' width='100%' %}
 
 ## Delighting the user
 
@@ -80,13 +79,13 @@ After implementing so many fun mechanisms to guide the user, we realized that th
 
 To demonstrate that idea we added some animated toys to the kitchen that are displayed immediately after the last step is completed. By adding some invisible clipping planes to the scene, we made it possible for the virtual toys to be occluded by the real kitchen.
 
-{% include youtube.html id='CXzawYi5ulo?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/9f7ac7707d2942379cc0a34d37727b42.mp4' width='100%' %}
 
 # Final prototype
 
 The video below presents all the ideas that were discussed in the previous section in their final form within our prototype.
 
-{% include youtube.html id='sn18abaSMg8?modestbranding=1&amp;showinfo=0&amp;rel=0' %}
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/bbfb3d9358284733b006a5d3d2474e5f.mp4' width='100%' %}
 
 We implemented all 17 steps of the toy kitchen’s instruction manual. After playing with the prototype extensively, we reached the following answers to the questions that we laid out in the beginning of this article:
 
