@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 30px;
-  margin-top: 90px;
+  margin-top: 60px;
   text-decoration: overline;
   a {
     color: inherit;
@@ -90,13 +90,7 @@ a {
 }
 
 ul, ol {
-  margin: 30px 30px 30px 10px;
-  padding-left: 60px;
-
-  @include mobile {
-      margin-left: 0;
-      padding-left: 30px;
-  }
+  margin: 30px 30px 30px 50px;
 }
 
 ul {
@@ -116,11 +110,7 @@ ul ul, ol ul {
 }
 
 li {
-  padding-left: 30px;
-
-  @include mobile {
-      padding-left: 15px;
-  }
+  padding-left: 5px;
 }
 
 em, i {
@@ -170,7 +160,7 @@ img {
 
 img.centered, .posts img.left, .posts img.right {
   display: block;
-  margin: 60px auto;
+  margin: 35px auto;
   max-width: 100%;
 }
 
@@ -213,7 +203,7 @@ img.right {
 
 .youtube-wrapper {
   position: relative;
-  margin: 60px 30px;
+  margin: 35px 30px;
   height: 0;
   padding-bottom: 56.25%;
 
@@ -472,7 +462,6 @@ nav {
     align-self: start;
 
     @include mobile {
-        border-radius: 50% 50% 4px 4px / 40% 40% 4px 4px;
         padding: 40px;
     }
 }
