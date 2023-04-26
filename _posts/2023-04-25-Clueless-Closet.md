@@ -27,7 +27,7 @@ The first thing we needed was access to images of a wide variety of garments. Sa
 
 ## Training models for garments
 
-In a previous [project]({{ site.baseurl }}{% link _posts/2022-10-1-AI-Product-Photos.md %}) we used [DreamBooth](https://dreambooth.github.io/) to fine-tune Stable Diffusion 1.4 to faithfully reproduce a wide variety of products.
+In a previous [project]({{ site.baseurl }}{% link _posts/2022-10-1-AI-Product-Photos.md %}) we used [DreamBooth](https://dreambooth.github.io/) to fine-tune Stable Diffusion 1.4 to faithfully reproduce a wide variety of products:
 
 ![_config.yml]({{ site.baseurl }}/images/ai_product_photos/teddy_overview.png){:.centered}
 
