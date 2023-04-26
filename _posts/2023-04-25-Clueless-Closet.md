@@ -162,7 +162,7 @@ One interesting thing to note in that final image is how the pant legs are rolle
 
 Once we realized how good these models are at inpainting clothes, we started wondering how far we could push them.
 
-Here's an image we diffused of the Spatial Commerce team's very own Brennan Letkeman:
+Here's an image we diffused of the Spatial Commerce team's very own 3D artist Brennan:
 
 {:.text-align-center}
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/brennan_outfit_0/outfit_0.png)
