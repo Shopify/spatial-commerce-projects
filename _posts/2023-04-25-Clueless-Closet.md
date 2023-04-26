@@ -52,7 +52,7 @@ Once we were certain that we could faithfully reproduce garments, we turned our 
 
 We found that it's better to have 2 separate LoRAs for each person: one trained on full-body shots, and one trained on close-ups of their face.
 
-Using 30 images of a person was enough to train a LoRA that could accurately represent them, and we could probably have gotten away with less images. Here's a comparison of a training image and a diffused one:
+Using 30 images of a person was enough to train a LoRA that could accurately represent them, and we probably could have gotten away with less images. Here's a comparison of a training image and a diffused one:
 
 {:.text-align-center}
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_face_real.png){:style="width:49%;"}
@@ -211,6 +211,6 @@ We believe the masking step could be automated using a model like Meta's [Segmen
 
 Unless the quality of the diffused images becomes more consistent, an automated pipeline is likely to produce mostly poor results with occasional gems.
 
-So for now the Clueless closet remains a piece of '90s movie magic, but we believe the world with catch up with it really soon, and when that happens even the boys in the Spatial Commerce team will become fashionable individuals.
+So for now the Clueless closet remains a piece of '90s movie magic, but we believe the world will catch up with it really soon, and when that happens even the boys in the Spatial Commerce team will become fashionable individuals.
 
 Thanks to Jessie and Max for all the help they gave us during this project!
