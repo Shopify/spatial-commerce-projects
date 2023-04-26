@@ -44,9 +44,7 @@ And use them to train a LoRA that could reproduce the garment quite accurately w
 
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_wearing_jacket.png){:.centered}
 
-Training each LoRA took around 30 minutes on an NVIDIA GeForce RTX 3080 GPU. We could have probably gotten away with less images of the garment, which could reduce the training time to be between 10 and 15 minutes.
-
-And the LoRA itself is simply a `.safetensors` file that weights nine megabytes.
+Training each LoRA took around 30 minutes on an NVIDIA GeForce RTX 3080 GPU. We probably could have gotten away with less images of the garment, which could reduce the training time to be between 10 and 15 minutes, and the LoRA itself is simply a `.safetensors` file that weights 9 megabytes.
 
 ## Training models for humans
 
