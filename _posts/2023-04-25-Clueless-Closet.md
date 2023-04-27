@@ -65,12 +65,12 @@ We tried a number of different approaches to diffuse Jessie and Max wearing garm
 Let's say we want to diffuse Max in this t-shirt and pants combination:
 
 {:.text-align-center}
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/bottom.JPG){:style="width:49%;"}
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/top.JPG){:style="width:49%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/bottom.JPG){:style="width:49%;"}
 
 We would start out by diffusing a full-body shot of him wearing a generic outfit using his full-body LoRA.
 
-We can control the way his body is posed using ControlNet and the OpenPose model. In this example we will be feeding this image of a posed 3D character to the model:
+We can control the way his body is posed using [ControlNet](https://arxiv.org/pdf/2302.05543.pdf) and the OpenPose model. In this example we will be feeding this image of a posed 3D character to the model:
 
 {:.text-align-center}
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/pose.png)
@@ -203,14 +203,37 @@ Yes:
 
 Even after playing with this technique for a couple of weeks, we kept discovering new things it could do. It never stopped surprising us.
 
+## Limitations
+
+The biggest limitation of this technique is that it isn't able to reproduce text or complex graphic designs. Too much is lost when those things go wrong, and it becomes difficult to evaluate the vibes of an outfit.
+
+As an example, here are some t-shirts that are not well-suited for this approach right now:
+
+{:.text-align-center}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/graphic_tees/0.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/graphic_tees/1.jpeg){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/graphic_tees/2.jpeg){:style="width:32%;"}
+
+Sadly, Stable Diffusion 1.5 doesn't always win when it comes to text:
+
+{:.text-align-center}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/graphic_tees/waaw_real.jpg){:style="width:49%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/graphic_tees/waaw_diffused.png){:style="width:49%;"}
+
+But we expect this to change soon with the release of models that can handle text like [DeepFloyd IF](https://github.com/deep-floyd/IF).
+
 # Conclusions
 
-The layered inpainting technique we have presented in this blog post allowed us to get really stunning results. Once we had validated it, we looked at the problem of trying to automate it.
+When we set out on this project, we were hoping to make this concept video real:
+
+{% include shopify-video.html id='https://cdn.shopify.com/videos/c/o/v/e58775aff2b74664aeeb4b2f9fa1f467.mp4' width='100%' %}
+
+The layered inpainting technique we have presented in this blog post allowed us to get really stunning results, but once we had validated it, we looked at the problem of trying to automate it.
 
 We believe the masking step could be automated using a model like Meta's [Segment Anything](https://segment-anything.com/), but even with proper masks of the legs and torso it can take dozens if not hundreds of image generations to achieve aesthetically pleasing results. Problems with hands, faces, feet and even backgrounds are extremely common.
 
 Unless the quality of the diffused images becomes more consistent, an automated pipeline is likely to produce mostly poor results with occasional gems.
 
-So for now the Clueless closet remains a piece of '90s movie magic, but we believe the world will catch up with it really soon, and when that happens even the boys in the Spatial Commerce team will become fashionable individuals.
+So for now the Clueless closet remains a piece of '90s movie magic, but we believe the world will catch up with it really soon, and when that happens even the Spatial Commerce boys will become fashionable individuals.
 
 Thanks to Jessie and Max for all the help they gave us during this project!
