@@ -36,13 +36,13 @@ A year later, there is a new and much more lightweight technique for doing the s
 Using [this](https://github.com/bmaltais/kohya_ss) open source tool we were able to take 10 images of a particular garment like these ones:
 
 {:.text-align-center}
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_jacket_0.png){:style="width:32%;"}
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_jacket_1.png){:style="width:32%;"}
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_jacket_2.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_0/max_jacket_0.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_0/max_jacket_1.png){:style="width:32%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_0/max_jacket_2.png){:style="width:32%;"}
 
 And use them to train a LoRA that could reproduce the garment quite accurately when combined with Stable Diffusion 1.5:
 
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_wearing_jacket.png){:.centered}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_0/diffusion.png){:.centered}
 
 Training each LoRA took around 30 minutes on an NVIDIA GeForce RTX 3080 GPU. We probably could have gotten away with less images of the garment, which could reduce the training time to be between 10 and 15 minutes, and the LoRA itself is simply a `.safetensors` file that weights 9 megabytes.
 
