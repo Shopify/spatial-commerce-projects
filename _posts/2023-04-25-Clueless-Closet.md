@@ -66,7 +66,7 @@ Let's say we want to diffuse Max in this t-shirt and pants combination:
 
 {:.text-align-center}
 ![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/top.JPG){:style="width:49%;"}
-![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/bottom.JPG){:style="width:49%;"}
+![_config.yml]({{ site.baseurl }}/images/clueless_closet/max_outfit_1/bottom.jpg){:style="width:49%;"}
 
 We would start out by diffusing a full-body shot of him wearing a generic outfit using his full-body LoRA.
 
