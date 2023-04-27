@@ -2,7 +2,7 @@
 layout: post
 title: Is the future of fashion still a piece of '90s movie magic?
 subtitle: Clueless_Closet
-video: https://cdn.shopify.com/videos/c/o/v/c041e6bfa71e4dcaa42d80bdb08a0872.mp4
+video: https://cdn.shopify.com/videos/c/o/v/dfc97efcecd74a53a1c04ecf9aa0f735.mp4
 ---
 
 In the 1995 cult classic film [Clueless](https://en.wikipedia.org/wiki/Clueless) there is a thirty second sequence that fashion fanatics still talk about to this day:
