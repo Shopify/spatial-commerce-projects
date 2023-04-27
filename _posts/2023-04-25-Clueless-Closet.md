@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Is the future of fashion still a piece of '90s movie magic?
+title: Is the future of fashion a piece of '90s movie magic?
 subtitle: Clueless_Closet
 video: https://cdn.shopify.com/videos/c/o/v/dfc97efcecd74a53a1c04ecf9aa0f735.mp4
 ---
